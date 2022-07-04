@@ -148,3 +148,13 @@ Main connection [MySQLi]: No connection could be made because the target machine
 #7 C:\xampp\htdocs\klinik-muhammadiyah\public\index.php(37): CodeIgniter\CodeIgniter->run()
 #8 C:\xampp\htdocs\klinik-muhammadiyah\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
 #9 {main}
+CRITICAL - 2022-07-04 10:39:32 --> Invalid file: /dokter/v_detail_ddokter.php
+#0 C:\xampp\htdocs\klinik-muhammadiyah\system\View\View.php(198): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('/dokter/v_detai...')
+#1 C:\xampp\htdocs\klinik-muhammadiyah\system\Common.php(1089): CodeIgniter\View\View->render('/dokter/v_detai...', Array, true)
+#2 C:\xampp\htdocs\klinik-muhammadiyah\app\Controllers\Dokter.php(24): view('/dokter/v_detai...')
+#3 C:\xampp\htdocs\klinik-muhammadiyah\system\CodeIgniter.php(832): App\Controllers\Dokter->detail_dokter()
+#4 C:\xampp\htdocs\klinik-muhammadiyah\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dokter))
+#5 C:\xampp\htdocs\klinik-muhammadiyah\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\klinik-muhammadiyah\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 C:\xampp\htdocs\klinik-muhammadiyah\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#8 {main}
