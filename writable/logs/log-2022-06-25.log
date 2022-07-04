@@ -1,0 +1,21 @@
+CRITICAL - 2022-06-25 10:38:10 --> Too few arguments to function App\Models\M_dokter::ambilData(), 0 passed in C:\xampp7\htdocs\klinik-muhammadiyah\app\Controllers\Admin.php on line 21 and exactly 1 expected
+#0 C:\xampp7\htdocs\klinik-muhammadiyah\app\Controllers\Admin.php(21): App\Models\M_dokter->ambilData()
+#1 C:\xampp7\htdocs\klinik-muhammadiyah\system\CodeIgniter.php(832): App\Controllers\Admin->ddokter()
+#2 C:\xampp7\htdocs\klinik-muhammadiyah\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#3 C:\xampp7\htdocs\klinik-muhammadiyah\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp7\htdocs\klinik-muhammadiyah\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp7\htdocs\klinik-muhammadiyah\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp7\\htdoc...')
+#6 {main}
+ERROR - 2022-06-25 10:38:33 --> Error connecting to the database: Access denied for user ''@'localhost' (using password: NO)
+CRITICAL - 2022-06-25 10:38:33 --> Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user ''@'localhost' (using password: NO)
+#0 C:\xampp7\htdocs\klinik-muhammadiyah\system\Database\BaseConnection.php(577): CodeIgniter\Database\BaseConnection->initialize()
+#1 C:\xampp7\htdocs\klinik-muhammadiyah\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#2 C:\xampp7\htdocs\klinik-muhammadiyah\app\Models\M_dokter.php(13): CodeIgniter\Database\BaseBuilder->get()
+#3 C:\xampp7\htdocs\klinik-muhammadiyah\app\Controllers\Admin.php(21): App\Models\M_dokter->ambilData()
+#4 C:\xampp7\htdocs\klinik-muhammadiyah\system\CodeIgniter.php(832): App\Controllers\Admin->ddokter()
+#5 C:\xampp7\htdocs\klinik-muhammadiyah\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#6 C:\xampp7\htdocs\klinik-muhammadiyah\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp7\htdocs\klinik-muhammadiyah\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp7\htdocs\klinik-muhammadiyah\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp7\\htdoc...')
+#9 {main}

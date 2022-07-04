@@ -1,0 +1,20 @@
+CRITICAL - 2022-05-31 11:07:34 --> Invalid file: v_branda.php
+#0 C:\xampp\htdocs\klinik-muhammadiyah\system\View\View.php(198): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('v_branda.php')
+#1 C:\xampp\htdocs\klinik-muhammadiyah\system\Common.php(1089): CodeIgniter\View\View->render('v_branda', Array, true)
+#2 C:\xampp\htdocs\klinik-muhammadiyah\app\Controllers\Admin.php(9): view('v_branda')
+#3 C:\xampp\htdocs\klinik-muhammadiyah\system\CodeIgniter.php(832): App\Controllers\Admin->index()
+#4 C:\xampp\htdocs\klinik-muhammadiyah\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#5 C:\xampp\htdocs\klinik-muhammadiyah\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\klinik-muhammadiyah\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 C:\xampp\htdocs\klinik-muhammadiyah\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#8 {main}
+CRITICAL - 2022-05-31 11:12:33 --> Invalid file: admin/v_dpaisen.php
+#0 C:\xampp\htdocs\klinik-muhammadiyah\system\View\View.php(198): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('admin/v_dpaisen...')
+#1 C:\xampp\htdocs\klinik-muhammadiyah\system\Common.php(1089): CodeIgniter\View\View->render('admin/v_dpaisen', Array, true)
+#2 C:\xampp\htdocs\klinik-muhammadiyah\app\Controllers\Admin.php(13): view('admin/v_dpaisen')
+#3 C:\xampp\htdocs\klinik-muhammadiyah\system\CodeIgniter.php(832): App\Controllers\Admin->dpasien()
+#4 C:\xampp\htdocs\klinik-muhammadiyah\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#5 C:\xampp\htdocs\klinik-muhammadiyah\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\klinik-muhammadiyah\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 C:\xampp\htdocs\klinik-muhammadiyah\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#8 {main}

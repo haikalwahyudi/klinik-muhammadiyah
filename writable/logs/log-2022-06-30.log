@@ -1,0 +1,85 @@
+CRITICAL - 2022-06-30 09:26:16 --> Call to a member function getError() on null
+#0 C:\xampp7\htdocs\klinik-muhammadiyah\system\CodeIgniter.php(832): App\Controllers\Fasilitas->ufasilitasAksi('2')
+#1 C:\xampp7\htdocs\klinik-muhammadiyah\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Fasilitas))
+#2 C:\xampp7\htdocs\klinik-muhammadiyah\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp7\htdocs\klinik-muhammadiyah\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\xampp7\htdocs\klinik-muhammadiyah\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp7\\htdoc...')
+#5 {main}
+CRITICAL - 2022-06-30 09:29:46 --> Call to a member function getError() on null
+#0 C:\xampp7\htdocs\klinik-muhammadiyah\system\CodeIgniter.php(832): App\Controllers\Fasilitas->ufasilitasAksi('2')
+#1 C:\xampp7\htdocs\klinik-muhammadiyah\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Fasilitas))
+#2 C:\xampp7\htdocs\klinik-muhammadiyah\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp7\htdocs\klinik-muhammadiyah\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\xampp7\htdocs\klinik-muhammadiyah\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp7\\htdoc...')
+#5 {main}
+CRITICAL - 2022-06-30 09:30:02 --> Call to a member function getError() on null
+#0 C:\xampp7\htdocs\klinik-muhammadiyah\system\CodeIgniter.php(832): App\Controllers\Fasilitas->ufasilitasAksi('2')
+#1 C:\xampp7\htdocs\klinik-muhammadiyah\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Fasilitas))
+#2 C:\xampp7\htdocs\klinik-muhammadiyah\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp7\htdocs\klinik-muhammadiyah\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\xampp7\htdocs\klinik-muhammadiyah\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp7\\htdoc...')
+#5 {main}
+CRITICAL - 2022-06-30 09:32:20 --> Undefined property: App\Controllers\Fasilitas::$M_berita
+#0 C:\xampp7\htdocs\klinik-muhammadiyah\app\Controllers\Fasilitas.php(71): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined prope...', 'C:\\xampp7\\htdoc...', 71)
+#1 C:\xampp7\htdocs\klinik-muhammadiyah\system\CodeIgniter.php(832): App\Controllers\Fasilitas->ufasilitasAksi()
+#2 C:\xampp7\htdocs\klinik-muhammadiyah\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Fasilitas))
+#3 C:\xampp7\htdocs\klinik-muhammadiyah\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp7\htdocs\klinik-muhammadiyah\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp7\htdocs\klinik-muhammadiyah\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp7\\htdoc...')
+#6 {main}
+ERROR - 2022-06-30 09:33:26 --> Unknown column 'jdl_fasilitas' in 'field list'
+CRITICAL - 2022-06-30 09:33:26 --> Unknown column 'jdl_fasilitas' in 'field list'
+#0 C:\xampp7\htdocs\klinik-muhammadiyah\system\Database\MySQLi\Connection.php(292): mysqli->query('UPDATE `fasilit...', 0)
+#1 C:\xampp7\htdocs\klinik-muhammadiyah\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `fasilit...')
+#2 C:\xampp7\htdocs\klinik-muhammadiyah\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `fasilit...')
+#3 C:\xampp7\htdocs\klinik-muhammadiyah\system\Database\BaseBuilder.php(1913): CodeIgniter\Database\BaseConnection->query('UPDATE `fasilit...', Array, false)
+#4 C:\xampp7\htdocs\klinik-muhammadiyah\app\Models\M_fasilitas.php(32): CodeIgniter\Database\BaseBuilder->update(Array)
+#5 C:\xampp7\htdocs\klinik-muhammadiyah\app\Controllers\Fasilitas.php(72): App\Models\M_fasilitas->ubah(Array, '2')
+#6 C:\xampp7\htdocs\klinik-muhammadiyah\system\CodeIgniter.php(832): App\Controllers\Fasilitas->ufasilitasAksi()
+#7 C:\xampp7\htdocs\klinik-muhammadiyah\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Fasilitas))
+#8 C:\xampp7\htdocs\klinik-muhammadiyah\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp7\htdocs\klinik-muhammadiyah\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp7\htdocs\klinik-muhammadiyah\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp7\\htdoc...')
+#11 {main}
+ERROR - 2022-06-30 10:33:44 --> Column 'jam' cannot be null
+CRITICAL - 2022-06-30 10:33:44 --> Column 'jam' cannot be null
+#0 C:\xampp7\htdocs\klinik-muhammadiyah\system\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `ja...', 0)
+#1 C:\xampp7\htdocs\klinik-muhammadiyah\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `ja...')
+#2 C:\xampp7\htdocs\klinik-muhammadiyah\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `ja...')
+#3 C:\xampp7\htdocs\klinik-muhammadiyah\system\Database\BaseBuilder.php(1771): CodeIgniter\Database\BaseConnection->query('INSERT INTO `ja...', Array, false)
+#4 C:\xampp7\htdocs\klinik-muhammadiyah\app\Models\M_jadwal.php(21): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\xampp7\htdocs\klinik-muhammadiyah\app\Controllers\Jadwal.php(32): App\Models\M_jadwal->simpan(Array)
+#6 C:\xampp7\htdocs\klinik-muhammadiyah\system\CodeIgniter.php(832): App\Controllers\Jadwal->tjadwalAksi()
+#7 C:\xampp7\htdocs\klinik-muhammadiyah\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Jadwal))
+#8 C:\xampp7\htdocs\klinik-muhammadiyah\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp7\htdocs\klinik-muhammadiyah\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp7\htdocs\klinik-muhammadiyah\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp7\\htdoc...')
+#11 {main}
+ERROR - 2022-06-30 10:34:54 --> Column 'hari' cannot be null
+CRITICAL - 2022-06-30 10:34:54 --> Column 'hari' cannot be null
+#0 C:\xampp7\htdocs\klinik-muhammadiyah\system\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `ja...', 0)
+#1 C:\xampp7\htdocs\klinik-muhammadiyah\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `ja...')
+#2 C:\xampp7\htdocs\klinik-muhammadiyah\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `ja...')
+#3 C:\xampp7\htdocs\klinik-muhammadiyah\system\Database\BaseBuilder.php(1771): CodeIgniter\Database\BaseConnection->query('INSERT INTO `ja...', Array, false)
+#4 C:\xampp7\htdocs\klinik-muhammadiyah\app\Models\M_jadwal.php(21): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\xampp7\htdocs\klinik-muhammadiyah\app\Controllers\Jadwal.php(32): App\Models\M_jadwal->simpan(Array)
+#6 C:\xampp7\htdocs\klinik-muhammadiyah\system\CodeIgniter.php(832): App\Controllers\Jadwal->tjadwalAksi()
+#7 C:\xampp7\htdocs\klinik-muhammadiyah\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Jadwal))
+#8 C:\xampp7\htdocs\klinik-muhammadiyah\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp7\htdocs\klinik-muhammadiyah\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp7\htdocs\klinik-muhammadiyah\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp7\\htdoc...')
+#11 {main}
+ERROR - 2022-06-30 10:34:59 --> Column 'hari' cannot be null
+CRITICAL - 2022-06-30 10:34:59 --> Column 'hari' cannot be null
+#0 C:\xampp7\htdocs\klinik-muhammadiyah\system\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `ja...', 0)
+#1 C:\xampp7\htdocs\klinik-muhammadiyah\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `ja...')
+#2 C:\xampp7\htdocs\klinik-muhammadiyah\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `ja...')
+#3 C:\xampp7\htdocs\klinik-muhammadiyah\system\Database\BaseBuilder.php(1771): CodeIgniter\Database\BaseConnection->query('INSERT INTO `ja...', Array, false)
+#4 C:\xampp7\htdocs\klinik-muhammadiyah\app\Models\M_jadwal.php(21): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\xampp7\htdocs\klinik-muhammadiyah\app\Controllers\Jadwal.php(32): App\Models\M_jadwal->simpan(Array)
+#6 C:\xampp7\htdocs\klinik-muhammadiyah\system\CodeIgniter.php(832): App\Controllers\Jadwal->tjadwalAksi()
+#7 C:\xampp7\htdocs\klinik-muhammadiyah\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Jadwal))
+#8 C:\xampp7\htdocs\klinik-muhammadiyah\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp7\htdocs\klinik-muhammadiyah\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp7\htdocs\klinik-muhammadiyah\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp7\\htdoc...')
+#11 {main}

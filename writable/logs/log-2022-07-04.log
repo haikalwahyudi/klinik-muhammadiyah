@@ -1,0 +1,150 @@
+CRITICAL - 2022-07-04 08:16:29 --> Undefined property: App\Controllers\User::$M_fasilitas
+#0 C:\xampp7\htdocs\klinik-muhammadiyah\app\Controllers\User.php(33): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined prope...', 'C:\\xampp7\\htdoc...', 33)
+#1 C:\xampp7\htdocs\klinik-muhammadiyah\system\CodeIgniter.php(832): App\Controllers\User->tuserAksi()
+#2 C:\xampp7\htdocs\klinik-muhammadiyah\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#3 C:\xampp7\htdocs\klinik-muhammadiyah\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp7\htdocs\klinik-muhammadiyah\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp7\htdocs\klinik-muhammadiyah\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp7\\htdoc...')
+#6 {main}
+CRITICAL - 2022-07-04 08:16:59 --> Undefined property: stdClass::$poto
+#0 C:\xampp7\htdocs\klinik-muhammadiyah\app\Views\user\v_duser.php(58): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined prope...', 'C:\\xampp7\\htdoc...', 58)
+#1 C:\xampp7\htdocs\klinik-muhammadiyah\system\View\View.php(210): include('C:\\xampp7\\htdoc...')
+#2 C:\xampp7\htdocs\klinik-muhammadiyah\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp7\htdocs\klinik-muhammadiyah\system\Common.php(1089): CodeIgniter\View\View->render('user/v_duser', Array, true)
+#4 C:\xampp7\htdocs\klinik-muhammadiyah\app\Controllers\User.php(20): view('user/v_duser', Array)
+#5 C:\xampp7\htdocs\klinik-muhammadiyah\system\CodeIgniter.php(832): App\Controllers\User->duser()
+#6 C:\xampp7\htdocs\klinik-muhammadiyah\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#7 C:\xampp7\htdocs\klinik-muhammadiyah\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp7\htdocs\klinik-muhammadiyah\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp7\htdocs\klinik-muhammadiyah\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp7\\htdoc...')
+#10 {main}
+CRITICAL - 2022-07-04 08:27:53 --> Undefined property: stdClass::$gbr_berita
+#0 C:\xampp7\htdocs\klinik-muhammadiyah\app\Controllers\User.php(48): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined prope...', 'C:\\xampp7\\htdoc...', 48)
+#1 C:\xampp7\htdocs\klinik-muhammadiyah\system\CodeIgniter.php(832): App\Controllers\User->huser('1')
+#2 C:\xampp7\htdocs\klinik-muhammadiyah\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#3 C:\xampp7\htdocs\klinik-muhammadiyah\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp7\htdocs\klinik-muhammadiyah\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp7\htdocs\klinik-muhammadiyah\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp7\\htdoc...')
+#6 {main}
+CRITICAL - 2022-07-04 08:39:44 --> Call to undefined method CodeIgniter\Database\MySQLi\Result::get()
+#0 C:\xampp7\htdocs\klinik-muhammadiyah\system\CodeIgniter.php(832): App\Controllers\User->uuser('1')
+#1 C:\xampp7\htdocs\klinik-muhammadiyah\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#2 C:\xampp7\htdocs\klinik-muhammadiyah\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp7\htdocs\klinik-muhammadiyah\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\xampp7\htdocs\klinik-muhammadiyah\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp7\\htdoc...')
+#5 {main}
+CRITICAL - 2022-07-04 08:40:05 --> Call to undefined method CodeIgniter\Database\MySQLi\Result::get()
+#0 C:\xampp7\htdocs\klinik-muhammadiyah\system\CodeIgniter.php(832): App\Controllers\User->uuser('1')
+#1 C:\xampp7\htdocs\klinik-muhammadiyah\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#2 C:\xampp7\htdocs\klinik-muhammadiyah\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp7\htdocs\klinik-muhammadiyah\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\xampp7\htdocs\klinik-muhammadiyah\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp7\\htdoc...')
+#5 {main}
+CRITICAL - 2022-07-04 08:40:07 --> Call to undefined method CodeIgniter\Database\MySQLi\Result::get()
+#0 C:\xampp7\htdocs\klinik-muhammadiyah\system\CodeIgniter.php(832): App\Controllers\User->uuser('1')
+#1 C:\xampp7\htdocs\klinik-muhammadiyah\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#2 C:\xampp7\htdocs\klinik-muhammadiyah\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp7\htdocs\klinik-muhammadiyah\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\xampp7\htdocs\klinik-muhammadiyah\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp7\\htdoc...')
+#5 {main}
+CRITICAL - 2022-07-04 08:40:08 --> Call to undefined method CodeIgniter\Database\MySQLi\Result::get()
+#0 C:\xampp7\htdocs\klinik-muhammadiyah\system\CodeIgniter.php(832): App\Controllers\User->uuser('1')
+#1 C:\xampp7\htdocs\klinik-muhammadiyah\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#2 C:\xampp7\htdocs\klinik-muhammadiyah\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp7\htdocs\klinik-muhammadiyah\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\xampp7\htdocs\klinik-muhammadiyah\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp7\\htdoc...')
+#5 {main}
+CRITICAL - 2022-07-04 08:40:35 --> Call to undefined method CodeIgniter\Database\MySQLi\Result::get()
+#0 C:\xampp7\htdocs\klinik-muhammadiyah\system\CodeIgniter.php(832): App\Controllers\User->uuser('1')
+#1 C:\xampp7\htdocs\klinik-muhammadiyah\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#2 C:\xampp7\htdocs\klinik-muhammadiyah\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp7\htdocs\klinik-muhammadiyah\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\xampp7\htdocs\klinik-muhammadiyah\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp7\\htdoc...')
+#5 {main}
+CRITICAL - 2022-07-04 08:46:07 --> Undefined property: stdClass::$nama
+#0 C:\xampp7\htdocs\klinik-muhammadiyah\app\Views\user\v_uuser.php(34): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined prope...', 'C:\\xampp7\\htdoc...', 34)
+#1 C:\xampp7\htdocs\klinik-muhammadiyah\system\View\View.php(210): include('C:\\xampp7\\htdoc...')
+#2 C:\xampp7\htdocs\klinik-muhammadiyah\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp7\htdocs\klinik-muhammadiyah\system\Common.php(1089): CodeIgniter\View\View->render('user/v_uuser', Array, true)
+#4 C:\xampp7\htdocs\klinik-muhammadiyah\app\Controllers\User.php(58): view('user/v_uuser', Array)
+#5 C:\xampp7\htdocs\klinik-muhammadiyah\system\CodeIgniter.php(832): App\Controllers\User->uuser('1')
+#6 C:\xampp7\htdocs\klinik-muhammadiyah\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#7 C:\xampp7\htdocs\klinik-muhammadiyah\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp7\htdocs\klinik-muhammadiyah\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp7\htdocs\klinik-muhammadiyah\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp7\\htdoc...')
+#10 {main}
+CRITICAL - 2022-07-04 09:09:17 --> Call to a member function getRandomName() on null
+#0 C:\xampp7\htdocs\klinik-muhammadiyah\system\CodeIgniter.php(832): App\Controllers\User->tuserAksi()
+#1 C:\xampp7\htdocs\klinik-muhammadiyah\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#2 C:\xampp7\htdocs\klinik-muhammadiyah\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp7\htdocs\klinik-muhammadiyah\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\xampp7\htdocs\klinik-muhammadiyah\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp7\\htdoc...')
+#5 {main}
+CRITICAL - 2022-07-04 09:12:11 --> unlink(img/): Is a directory
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'unlink(img/): I...', 'C:\\xampp7\\htdoc...', 71)
+#1 C:\xampp7\htdocs\klinik-muhammadiyah\app\Controllers\User.php(71): unlink('img/')
+#2 C:\xampp7\htdocs\klinik-muhammadiyah\system\CodeIgniter.php(832): App\Controllers\User->uuserAksi()
+#3 C:\xampp7\htdocs\klinik-muhammadiyah\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#4 C:\xampp7\htdocs\klinik-muhammadiyah\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp7\htdocs\klinik-muhammadiyah\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 C:\xampp7\htdocs\klinik-muhammadiyah\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp7\\htdoc...')
+#7 {main}
+CRITICAL - 2022-07-04 09:14:06 --> unlink(img/): Is a directory
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'unlink(img/): I...', 'C:\\xampp7\\htdoc...', 71)
+#1 C:\xampp7\htdocs\klinik-muhammadiyah\app\Controllers\User.php(71): unlink('img/')
+#2 C:\xampp7\htdocs\klinik-muhammadiyah\system\CodeIgniter.php(832): App\Controllers\User->uuserAksi()
+#3 C:\xampp7\htdocs\klinik-muhammadiyah\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#4 C:\xampp7\htdocs\klinik-muhammadiyah\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp7\htdocs\klinik-muhammadiyah\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 C:\xampp7\htdocs\klinik-muhammadiyah\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp7\\htdoc...')
+#7 {main}
+CRITICAL - 2022-07-04 09:14:26 --> unlink(img/): Is a directory
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'unlink(img/): I...', 'C:\\xampp7\\htdoc...', 71)
+#1 C:\xampp7\htdocs\klinik-muhammadiyah\app\Controllers\User.php(71): unlink('img/')
+#2 C:\xampp7\htdocs\klinik-muhammadiyah\system\CodeIgniter.php(832): App\Controllers\User->uuserAksi()
+#3 C:\xampp7\htdocs\klinik-muhammadiyah\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#4 C:\xampp7\htdocs\klinik-muhammadiyah\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp7\htdocs\klinik-muhammadiyah\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 C:\xampp7\htdocs\klinik-muhammadiyah\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp7\\htdoc...')
+#7 {main}
+CRITICAL - 2022-07-04 09:14:41 --> unlink(img/): Is a directory
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'unlink(img/): I...', 'C:\\xampp7\\htdoc...', 48)
+#1 C:\xampp7\htdocs\klinik-muhammadiyah\app\Controllers\User.php(48): unlink('img/')
+#2 C:\xampp7\htdocs\klinik-muhammadiyah\system\CodeIgniter.php(832): App\Controllers\User->huser('1')
+#3 C:\xampp7\htdocs\klinik-muhammadiyah\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#4 C:\xampp7\htdocs\klinik-muhammadiyah\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp7\htdocs\klinik-muhammadiyah\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 C:\xampp7\htdocs\klinik-muhammadiyah\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp7\\htdoc...')
+#7 {main}
+CRITICAL - 2022-07-04 09:16:03 --> Undefined property: App\Controllers\User::$M_berita
+#0 C:\xampp7\htdocs\klinik-muhammadiyah\app\Controllers\User.php(49): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined prope...', 'C:\\xampp7\\htdoc...', 49)
+#1 C:\xampp7\htdocs\klinik-muhammadiyah\system\CodeIgniter.php(832): App\Controllers\User->huser('2')
+#2 C:\xampp7\htdocs\klinik-muhammadiyah\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#3 C:\xampp7\htdocs\klinik-muhammadiyah\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp7\htdocs\klinik-muhammadiyah\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp7\htdocs\klinik-muhammadiyah\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp7\\htdoc...')
+#6 {main}
+CRITICAL - 2022-07-04 09:16:33 --> unlink(img/1656944156_694348bd61dbcc6c998b.jpg): No such file or directory
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'unlink(img/1656...', 'C:\\xampp7\\htdoc...', 48)
+#1 C:\xampp7\htdocs\klinik-muhammadiyah\app\Controllers\User.php(48): unlink('img/1656944156_...')
+#2 C:\xampp7\htdocs\klinik-muhammadiyah\system\CodeIgniter.php(832): App\Controllers\User->huser('2')
+#3 C:\xampp7\htdocs\klinik-muhammadiyah\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#4 C:\xampp7\htdocs\klinik-muhammadiyah\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp7\htdocs\klinik-muhammadiyah\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 C:\xampp7\htdocs\klinik-muhammadiyah\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp7\\htdoc...')
+#7 {main}
+ERROR - 2022-07-04 09:53:34 --> Error connecting to the database: No connection could be made because the target machine actively refused it.
+
+CRITICAL - 2022-07-04 09:53:34 --> Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it.
+
+#0 C:\xampp\htdocs\klinik-muhammadiyah\system\Database\BaseConnection.php(577): CodeIgniter\Database\BaseConnection->initialize()
+#1 C:\xampp\htdocs\klinik-muhammadiyah\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#2 C:\xampp\htdocs\klinik-muhammadiyah\app\Models\M_user.php(13): CodeIgniter\Database\BaseBuilder->get()
+#3 C:\xampp\htdocs\klinik-muhammadiyah\app\Controllers\User.php(18): App\Models\M_user->ambilData()
+#4 C:\xampp\htdocs\klinik-muhammadiyah\system\CodeIgniter.php(832): App\Controllers\User->duser()
+#5 C:\xampp\htdocs\klinik-muhammadiyah\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#6 C:\xampp\htdocs\klinik-muhammadiyah\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\klinik-muhammadiyah\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp\htdocs\klinik-muhammadiyah\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#9 {main}

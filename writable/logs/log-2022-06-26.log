@@ -1,0 +1,163 @@
+CRITICAL - 2022-06-26 08:51:59 --> Invalid file: user/v_duser.php
+#0 C:\xampp7\htdocs\klinik-muhammadiyah\system\View\View.php(198): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('user/v_duser.ph...')
+#1 C:\xampp7\htdocs\klinik-muhammadiyah\system\Common.php(1089): CodeIgniter\View\View->render('user/v_duser', Array, true)
+#2 C:\xampp7\htdocs\klinik-muhammadiyah\app\Controllers\User.php(11): view('user/v_duser')
+#3 C:\xampp7\htdocs\klinik-muhammadiyah\system\CodeIgniter.php(832): App\Controllers\User->duser()
+#4 C:\xampp7\htdocs\klinik-muhammadiyah\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#5 C:\xampp7\htdocs\klinik-muhammadiyah\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp7\htdocs\klinik-muhammadiyah\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 C:\xampp7\htdocs\klinik-muhammadiyah\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp7\\htdoc...')
+#8 {main}
+CRITICAL - 2022-06-26 08:52:51 --> Invalid file: user/index.php
+#0 C:\xampp7\htdocs\klinik-muhammadiyah\system\View\View.php(198): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('user/index.php')
+#1 C:\xampp7\htdocs\klinik-muhammadiyah\system\Common.php(1089): CodeIgniter\View\View->render('user/index.php', Array, true)
+#2 C:\xampp7\htdocs\klinik-muhammadiyah\app\Controllers\User.php(11): view('user/index.php')
+#3 C:\xampp7\htdocs\klinik-muhammadiyah\system\CodeIgniter.php(832): App\Controllers\User->duser()
+#4 C:\xampp7\htdocs\klinik-muhammadiyah\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#5 C:\xampp7\htdocs\klinik-muhammadiyah\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp7\htdocs\klinik-muhammadiyah\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 C:\xampp7\htdocs\klinik-muhammadiyah\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp7\\htdoc...')
+#8 {main}
+CRITICAL - 2022-06-26 09:01:57 --> Invalid file: user/v_tuser.php
+#0 C:\xampp7\htdocs\klinik-muhammadiyah\system\View\View.php(198): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('user/v_tuser.ph...')
+#1 C:\xampp7\htdocs\klinik-muhammadiyah\system\Common.php(1089): CodeIgniter\View\View->render('user/v_tuser', Array, true)
+#2 C:\xampp7\htdocs\klinik-muhammadiyah\app\Controllers\User.php(15): view('user/v_tuser')
+#3 C:\xampp7\htdocs\klinik-muhammadiyah\system\CodeIgniter.php(832): App\Controllers\User->tuser()
+#4 C:\xampp7\htdocs\klinik-muhammadiyah\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#5 C:\xampp7\htdocs\klinik-muhammadiyah\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp7\htdocs\klinik-muhammadiyah\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 C:\xampp7\htdocs\klinik-muhammadiyah\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp7\\htdoc...')
+#8 {main}
+CRITICAL - 2022-06-26 09:40:13 --> Invalid file: user/v_tuser.php
+#0 C:\xampp7\htdocs\klinik-muhammadiyah\system\View\View.php(198): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('user/v_tuser.ph...')
+#1 C:\xampp7\htdocs\klinik-muhammadiyah\system\Common.php(1089): CodeIgniter\View\View->render('user/v_tuser', Array, true)
+#2 C:\xampp7\htdocs\klinik-muhammadiyah\app\Controllers\User.php(15): view('user/v_tuser')
+#3 C:\xampp7\htdocs\klinik-muhammadiyah\system\CodeIgniter.php(832): App\Controllers\User->tuser()
+#4 C:\xampp7\htdocs\klinik-muhammadiyah\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#5 C:\xampp7\htdocs\klinik-muhammadiyah\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp7\htdocs\klinik-muhammadiyah\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 C:\xampp7\htdocs\klinik-muhammadiyah\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp7\\htdoc...')
+#8 {main}
+CRITICAL - 2022-06-26 09:58:57 --> Constant expression contains invalid operations
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2022-06-26 10:28:18 --> Too few arguments to function App\Controllers\Poli::hpoli(), 0 passed in C:\xampp7\htdocs\klinik-muhammadiyah\system\CodeIgniter.php on line 832 and exactly 1 expected
+#0 C:\xampp7\htdocs\klinik-muhammadiyah\system\CodeIgniter.php(832): App\Controllers\Poli->hpoli()
+#1 C:\xampp7\htdocs\klinik-muhammadiyah\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Poli))
+#2 C:\xampp7\htdocs\klinik-muhammadiyah\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp7\htdocs\klinik-muhammadiyah\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\xampp7\htdocs\klinik-muhammadiyah\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp7\\htdoc...')
+#5 {main}
+CRITICAL - 2022-06-26 10:29:24 --> Cannot use object of type stdClass as array
+#0 C:\xampp7\htdocs\klinik-muhammadiyah\system\View\View.php(210): include()
+#1 C:\xampp7\htdocs\klinik-muhammadiyah\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#2 C:\xampp7\htdocs\klinik-muhammadiyah\system\Common.php(1089): CodeIgniter\View\View->render('poli/v_dpoli', Array, true)
+#3 C:\xampp7\htdocs\klinik-muhammadiyah\app\Controllers\Poli.php(20): view('poli/v_dpoli', Array)
+#4 C:\xampp7\htdocs\klinik-muhammadiyah\system\CodeIgniter.php(832): App\Controllers\Poli->dpoli()
+#5 C:\xampp7\htdocs\klinik-muhammadiyah\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Poli))
+#6 C:\xampp7\htdocs\klinik-muhammadiyah\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp7\htdocs\klinik-muhammadiyah\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp7\htdocs\klinik-muhammadiyah\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp7\\htdoc...')
+#9 {main}
+CRITICAL - 2022-06-26 10:29:34 --> Cannot use object of type stdClass as array
+#0 C:\xampp7\htdocs\klinik-muhammadiyah\system\View\View.php(210): include()
+#1 C:\xampp7\htdocs\klinik-muhammadiyah\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#2 C:\xampp7\htdocs\klinik-muhammadiyah\system\Common.php(1089): CodeIgniter\View\View->render('poli/v_dpoli', Array, true)
+#3 C:\xampp7\htdocs\klinik-muhammadiyah\app\Controllers\Poli.php(20): view('poli/v_dpoli', Array)
+#4 C:\xampp7\htdocs\klinik-muhammadiyah\system\CodeIgniter.php(832): App\Controllers\Poli->dpoli()
+#5 C:\xampp7\htdocs\klinik-muhammadiyah\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Poli))
+#6 C:\xampp7\htdocs\klinik-muhammadiyah\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp7\htdocs\klinik-muhammadiyah\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp7\htdocs\klinik-muhammadiyah\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp7\\htdoc...')
+#9 {main}
+CRITICAL - 2022-06-26 10:29:35 --> Cannot use object of type stdClass as array
+#0 C:\xampp7\htdocs\klinik-muhammadiyah\system\View\View.php(210): include()
+#1 C:\xampp7\htdocs\klinik-muhammadiyah\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#2 C:\xampp7\htdocs\klinik-muhammadiyah\system\Common.php(1089): CodeIgniter\View\View->render('poli/v_dpoli', Array, true)
+#3 C:\xampp7\htdocs\klinik-muhammadiyah\app\Controllers\Poli.php(20): view('poli/v_dpoli', Array)
+#4 C:\xampp7\htdocs\klinik-muhammadiyah\system\CodeIgniter.php(832): App\Controllers\Poli->dpoli()
+#5 C:\xampp7\htdocs\klinik-muhammadiyah\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Poli))
+#6 C:\xampp7\htdocs\klinik-muhammadiyah\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp7\htdocs\klinik-muhammadiyah\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp7\htdocs\klinik-muhammadiyah\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp7\\htdoc...')
+#9 {main}
+CRITICAL - 2022-06-26 10:40:51 --> syntax error, unexpected token ";", expecting "]"
+#0 C:\xampp7\htdocs\klinik-muhammadiyah\system\Router\Router.php(175): CodeIgniter\Router\Router->autoRoute('Poli/upoli/5')
+#1 C:\xampp7\htdocs\klinik-muhammadiyah\system\CodeIgniter.php(726): CodeIgniter\Router\Router->handle('Poli/upoli/5')
+#2 C:\xampp7\htdocs\klinik-muhammadiyah\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+#3 C:\xampp7\htdocs\klinik-muhammadiyah\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp7\htdocs\klinik-muhammadiyah\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp7\htdocs\klinik-muhammadiyah\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp7\\htdoc...')
+#6 {main}
+CRITICAL - 2022-06-26 10:41:10 --> Call to undefined method CodeIgniter\Database\MySQLi\Result::get()
+#0 C:\xampp7\htdocs\klinik-muhammadiyah\system\CodeIgniter.php(832): App\Controllers\Poli->upoli('5')
+#1 C:\xampp7\htdocs\klinik-muhammadiyah\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Poli))
+#2 C:\xampp7\htdocs\klinik-muhammadiyah\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp7\htdocs\klinik-muhammadiyah\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\xampp7\htdocs\klinik-muhammadiyah\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp7\\htdoc...')
+#5 {main}
+CRITICAL - 2022-06-26 10:42:18 --> Call to undefined method CodeIgniter\Database\MySQLi\Result::get()
+#0 C:\xampp7\htdocs\klinik-muhammadiyah\system\CodeIgniter.php(832): App\Controllers\Poli->upoli('5')
+#1 C:\xampp7\htdocs\klinik-muhammadiyah\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Poli))
+#2 C:\xampp7\htdocs\klinik-muhammadiyah\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp7\htdocs\klinik-muhammadiyah\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\xampp7\htdocs\klinik-muhammadiyah\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp7\\htdoc...')
+#5 {main}
+CRITICAL - 2022-06-26 10:43:08 --> Undefined property: CodeIgniter\Database\MySQLi\Result::$nm_poli
+#0 C:\xampp7\htdocs\klinik-muhammadiyah\app\Views\poli\v_upoli.php(37): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined prope...', 'C:\\xampp7\\htdoc...', 37)
+#1 C:\xampp7\htdocs\klinik-muhammadiyah\system\View\View.php(210): include('C:\\xampp7\\htdoc...')
+#2 C:\xampp7\htdocs\klinik-muhammadiyah\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp7\htdocs\klinik-muhammadiyah\system\Common.php(1089): CodeIgniter\View\View->render('poli/v_upoli', Array, true)
+#4 C:\xampp7\htdocs\klinik-muhammadiyah\app\Controllers\Poli.php(46): view('poli/v_upoli', Array)
+#5 C:\xampp7\htdocs\klinik-muhammadiyah\system\CodeIgniter.php(832): App\Controllers\Poli->upoli('5')
+#6 C:\xampp7\htdocs\klinik-muhammadiyah\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Poli))
+#7 C:\xampp7\htdocs\klinik-muhammadiyah\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp7\htdocs\klinik-muhammadiyah\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp7\htdocs\klinik-muhammadiyah\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp7\\htdoc...')
+#10 {main}
+CRITICAL - 2022-06-26 10:43:25 --> Cannot use object of type CodeIgniter\Database\MySQLi\Result as array
+#0 C:\xampp7\htdocs\klinik-muhammadiyah\system\View\View.php(210): include()
+#1 C:\xampp7\htdocs\klinik-muhammadiyah\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#2 C:\xampp7\htdocs\klinik-muhammadiyah\system\Common.php(1089): CodeIgniter\View\View->render('poli/v_upoli', Array, true)
+#3 C:\xampp7\htdocs\klinik-muhammadiyah\app\Controllers\Poli.php(46): view('poli/v_upoli', Array)
+#4 C:\xampp7\htdocs\klinik-muhammadiyah\system\CodeIgniter.php(832): App\Controllers\Poli->upoli('5')
+#5 C:\xampp7\htdocs\klinik-muhammadiyah\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Poli))
+#6 C:\xampp7\htdocs\klinik-muhammadiyah\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp7\htdocs\klinik-muhammadiyah\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp7\htdocs\klinik-muhammadiyah\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp7\\htdoc...')
+#9 {main}
+CRITICAL - 2022-06-26 10:44:08 --> Cannot use object of type stdClass as array
+#0 C:\xampp7\htdocs\klinik-muhammadiyah\system\View\View.php(210): include()
+#1 C:\xampp7\htdocs\klinik-muhammadiyah\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#2 C:\xampp7\htdocs\klinik-muhammadiyah\system\Common.php(1089): CodeIgniter\View\View->render('poli/v_upoli', Array, true)
+#3 C:\xampp7\htdocs\klinik-muhammadiyah\app\Controllers\Poli.php(46): view('poli/v_upoli', Array)
+#4 C:\xampp7\htdocs\klinik-muhammadiyah\system\CodeIgniter.php(832): App\Controllers\Poli->upoli('5')
+#5 C:\xampp7\htdocs\klinik-muhammadiyah\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Poli))
+#6 C:\xampp7\htdocs\klinik-muhammadiyah\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp7\htdocs\klinik-muhammadiyah\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp7\htdocs\klinik-muhammadiyah\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp7\\htdoc...')
+#9 {main}
+CRITICAL - 2022-06-26 10:51:15 --> Undefined variable $data
+#0 C:\xampp7\htdocs\klinik-muhammadiyah\app\Views\poli\v_upoli.php(37): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'C:\\xampp7\\htdoc...', 37)
+#1 C:\xampp7\htdocs\klinik-muhammadiyah\system\View\View.php(210): include('C:\\xampp7\\htdoc...')
+#2 C:\xampp7\htdocs\klinik-muhammadiyah\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp7\htdocs\klinik-muhammadiyah\system\Common.php(1089): CodeIgniter\View\View->render('poli/v_upoli', Array, true)
+#4 C:\xampp7\htdocs\klinik-muhammadiyah\app\Controllers\Poli.php(56): view('poli/v_upoli')
+#5 C:\xampp7\htdocs\klinik-muhammadiyah\system\CodeIgniter.php(832): App\Controllers\Poli->upoliAksi()
+#6 C:\xampp7\htdocs\klinik-muhammadiyah\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Poli))
+#7 C:\xampp7\htdocs\klinik-muhammadiyah\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp7\htdocs\klinik-muhammadiyah\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp7\htdocs\klinik-muhammadiyah\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp7\\htdoc...')
+#10 {main}
+CRITICAL - 2022-06-26 10:52:23 --> Undefined variable $data
+#0 C:\xampp7\htdocs\klinik-muhammadiyah\app\Views\poli\v_dpoli.php(54): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'C:\\xampp7\\htdoc...', 54)
+#1 C:\xampp7\htdocs\klinik-muhammadiyah\system\View\View.php(210): include('C:\\xampp7\\htdoc...')
+#2 C:\xampp7\htdocs\klinik-muhammadiyah\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp7\htdocs\klinik-muhammadiyah\system\Common.php(1089): CodeIgniter\View\View->render('poli/v_dpoli', Array, true)
+#4 C:\xampp7\htdocs\klinik-muhammadiyah\app\Controllers\Poli.php(56): view('poli/v_dpoli')
+#5 C:\xampp7\htdocs\klinik-muhammadiyah\system\CodeIgniter.php(832): App\Controllers\Poli->upoliAksi()
+#6 C:\xampp7\htdocs\klinik-muhammadiyah\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Poli))
+#7 C:\xampp7\htdocs\klinik-muhammadiyah\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp7\htdocs\klinik-muhammadiyah\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp7\htdocs\klinik-muhammadiyah\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp7\\htdoc...')
+#10 {main}
