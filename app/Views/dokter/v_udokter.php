@@ -7,7 +7,7 @@
         <div class="container-fluid">
             <div class="row mb-2">
                 <div class="col-sm-6">
-                    <h1 class="m-0">Tambah Data Dokter</h1>
+                    <h1 class="m-0">Ubah Data Dokter</h1>
                 </div>
                 <!-- /.col -->
                 <!-- /.col -->
@@ -25,67 +25,75 @@
                     <div class="card">
                         <!-- /.card-header -->
                         <div class="card-body">
-                            <form action="<?= base_url() ?>/Dokter/tdokterAksi" method="POST" enctype="multipart/form-data">
+                            <form action="<?= base_url() ?>/Dokter/udokterAksi" method="POST" enctype="multipart/form-data">
                                 <div class="form-group">
                                     <label>Nama Dokter</label>
-                                    <input type="text" name="nm_dokter" class="form-control" required>
+                                    <input type="hidden" name="id" value="<?= $data->id_dokter; ?>">
+                                    <input type="text" name="nm_dokter" class="form-control" value="<?= $data->nm_dokter; ?>" required>
                                 </div>
                                 <div class="form-group">
                                     <label>Spesialis</label>
                                     <select name="id_poli" class="form-control">
-                                        <option value="">-Pilih-</option>
                                         <?php foreach ($poli as $pli) { ?>
-                                            <option value="<?= $pli->id_poli ?>"><?= $pli->nm_poli ?></option>
+                                            <option value="<?= $pli->id_poli ?>" <?php if ($pli->id_poli == $data->id_poli) {
+                                                                                        echo 'selected';
+                                                                                    } ?>><?= $pli->nm_poli ?></option>
                                         <?php } ?>
                                     </select>
                                 </div>
                                 <div class="form-group">
                                     <label>Tempat Lahir</label>
-                                    <input type="text" name="tempat_lahir" class="form-control" required>
+                                    <input type="text" name="tempat_lahir" class="form-control" value="<?= $data->tempat_lahir; ?>" required>
                                 </div>
                                 <div class="form-group">
                                     <label>Tanggal Lahir</label>
-                                    <input type="date" name="tgl_lahir" class="form-control" required>
+                                    <input type="date" name="tgl_lahir" class="form-control" value="<?= $data->tgl_lahir; ?>" required>
                                 </div>
                                 <div class="form-group">
                                     <label>Email</label>
-                                    <input type="email" name="email" class="form-control" required>
+                                    <input type="email" name="email" class="form-control" value="<?= $data->email; ?>" required>
                                 </div>
                                 <div class="form-group">
                                     <label>No Hp</label>
-                                    <input type="number" name="nohp" class="form-control" required>
+                                    <input type="text" name="nohp" class="form-control" value="<?= $data->nohp; ?>" required>
                                 </div>
                                 <div class="form-group">
                                     <label for="">Jenis Kelamin</label>
                                     <div class="custom-control custom-radio">
-                                        <input class="custom-control-input" type="radio" id="customRadio1" name="jk" value="Laki-Laki" checked>
+                                        <input class="custom-control-input" type="radio" id="customRadio1" <?php if ($data->jk == "Laki-Laki") {
+                                                                                                                echo 'checked';
+                                                                                                            } ?> name="customRadio" value="Laki-Laki" checked>
                                         <label for="customRadio1" class="custom-control-label">Laki - Laki</label>
                                     </div>
                                     <div class="custom-control custom-radio">
-                                        <input class="custom-control-input" type="radio" id="customRadio2" name="jk" value="Perempuan">
+                                        <input class="custom-control-input" type="radio" id="customRadio2" <?php if ($data->jk == "Perempuan") {
+                                                                                                                echo 'checked';
+                                                                                                            } ?> name="customRadio" value="Perempuan">
                                         <label for="customRadio2" class="custom-control-label">Perempuan</label>
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label>Jadwal</label>
-                                    <select name="id_jadwal" class="form-control">
-                                        <option value="">-Pilih-</option>
+                                    <select name="jadwal" class="form-control">
                                         <?php foreach ($jadwal as $jdwl) { ?>
-                                            <option value="<?= $jdwl->id_jadwal ?>"><?= $jdwl->jam ?></option>
+                                            <option value="<?= $jdwl->id_jadwal ?>" <?php if ($jdwl->id_jadwal == $data->id_jadwal) {
+                                                                                        echo 'selected';
+                                                                                    } ?>><?= $jdwl->jam ?></option>
                                         <?php } ?>
                                     </select>
                                 </div>
                                 <div class="form-group">
                                     <label>Foto</label>
-                                    <input type="file" name="foto" class="form-control" required>
+                                    <input type="hidden" name="old_foto" value="<?= $data->foto; ?>" class="form-control">
+                                    <input type="file" name="foto" class="form-control">
                                 </div>
                                 <div class="form-group">
                                     <label>Alamat</label>
-                                    <textarea name="alamat" cols="30" rows="10" class="form-control"></textarea>
+                                    <textarea name="alamat" cols="30" rows="10" class="form-control"><?= $data->alamat; ?></textarea>
                                 </div>
                         </div>
                         <div class="card-footer">
-                            <Button class="btn btn-success">Simpan</Button>
+                            <Button class="btn btn-success">Simpan Perubahan</Button>
                             <a href="<?= base_url(); ?>/Dokter/ddokter" class="btn btn-danger">Batal</a>
                         </div>
                         </form>

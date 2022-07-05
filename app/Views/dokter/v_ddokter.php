@@ -21,10 +21,31 @@
 
             <div class="row">
                 <div class="col-md-12">
+                    <!-- Alert -->
+                    <?php if (session()->getFlashdata('ubah')) { ?>
+                        <div class="alert alert-success alert-dismissible">
+                            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                            <h5><i class="icon fas fa-check"></i> Alert!</h5>
+                            <?= session()->getFlashdata('ubah'); ?>
+                        </div>
+                    <?php } elseif (session()->getFlashdata('hapus')) { ?>
+                        <div class="alert alert-danger alert-dismissible">
+                            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                            <h5><i class="icon fas fa-check"></i> Alert!</h5>
+                            <?= session()->getFlashdata('hapus'); ?>
+                        </div>
+                    <?php } elseif (session()->getFlashdata('simpan')) { ?>
+                        <div class="alert alert-success alert-dismissible">
+                            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                            <h5><i class="icon fas fa-check"></i> Alert!</h5>
+                            <?= session()->getFlashdata('simpan'); ?>
+                        </div>
+                    <?php } ?>
+                    <!-- Alert -->
                     <div class="card">
                         <div class="card-header">
                             <h3 class="card-title">
-                                <button class="btn text-light" style="background-color:#16a085"><i class="fa fa-plus"></i> Tambah</button>
+                                <a href="<?= base_url(); ?>/Dokter/tdokter" class="btn text-light" style="background-color:#16a085"><i class="fa fa-plus"></i> Tambah</a>
                             </h3>
                         </div>
                         <!-- /.card-header -->
@@ -47,14 +68,14 @@
                                         <tr>
                                             <td><?= $no++; ?></td>
                                             <td><?= $d->nm_dokter; ?></td>
-                                            <td><?= $d->id_poli; ?></td>
+                                            <td><?= $d->nm_poli; ?></td>
                                             <td>
-                                                <img src="<?= base_url() ?>/image/FB_IMG_1652761969030.jpg" width="80" alt="Gambar">
+                                                <img src="<?= base_url() ?>/img/<?= $d->foto; ?>" width="80" alt="Gambar">
                                             </td>
                                             <td>
-                                                <a href="<?= base_url(); ?>/Admin/detail_dokter" class="btn btn-success btn-sm">Detail</a>
-                                                <button class="btn btn-warning btn-sm">Ubah</button>
-                                                <button class="btn btn-danger btn-sm">Hapus</button>
+                                                <a href="<?= base_url(); ?>/Dokter/detail_dokter/<?= $d->id_dokter; ?>" class="btn btn-success btn-sm">Detail</a>
+                                                <a href="<?= base_url(); ?>/Dokter/udokter/<?= $d->id_dokter; ?>" class="btn btn-warning btn-sm">Ubah</a>
+                                                <a href="<?= base_url(); ?>/Dokter/hdokter/<?= $d->id_dokter; ?>" onclick="return confirm('Yaking ingin menghapus data ini?');" class="btn btn-danger btn-sm">Hapus</a>
                                             </td>
                                         </tr>
                                     <?php } ?>
