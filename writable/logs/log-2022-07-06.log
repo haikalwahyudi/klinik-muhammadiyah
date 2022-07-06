@@ -62,3 +62,9 @@ CRITICAL - 2022-07-06 09:26:10 --> Too few arguments to function App\Controllers
 #3 C:\xampp\htdocs\klinik-muhammadiyah\public\index.php(37): CodeIgniter\CodeIgniter->run()
 #4 C:\xampp\htdocs\klinik-muhammadiyah\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
 #5 {main}
+CRITICAL - 2022-07-06 12:11:21 --> Call to undefined method App\Controllers\Login::initController()
+#0 C:\xampp\htdocs\klinik-muhammadiyah\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->createController()
+#1 C:\xampp\htdocs\klinik-muhammadiyah\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#2 C:\xampp\htdocs\klinik-muhammadiyah\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#3 C:\xampp\htdocs\klinik-muhammadiyah\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#4 {main}
