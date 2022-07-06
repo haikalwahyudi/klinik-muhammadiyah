@@ -51,7 +51,7 @@
               </a>
             </li>
             <li class="nav-item">
-              <a href="<?= base_url(); ?>/Admin/dpasien" class="nav-link">
+              <a href="<?= base_url(); ?>/pasien/dpasien" class="nav-link">
                 <i class="fa fa-users text-light"></i>
                 <p class="text-light">Pasien</p>
               </a>

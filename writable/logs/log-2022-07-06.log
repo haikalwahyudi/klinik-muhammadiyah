@@ -1,0 +1,64 @@
+CRITICAL - 2022-07-06 09:05:50 --> Undefined variable: d0
+#0 C:\xampp\htdocs\klinik-muhammadiyah\app\Views\pasien\v_dpasien.php(72): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 72, Array)
+#1 C:\xampp\htdocs\klinik-muhammadiyah\system\View\View.php(210): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\klinik-muhammadiyah\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp\htdocs\klinik-muhammadiyah\system\Common.php(1089): CodeIgniter\View\View->render('pasien/v_dpasie...', Array, true)
+#4 C:\xampp\htdocs\klinik-muhammadiyah\app\Controllers\Pasien.php(21): view('pasien/v_dpasie...', Array)
+#5 C:\xampp\htdocs\klinik-muhammadiyah\system\CodeIgniter.php(832): App\Controllers\Pasien->dpasien()
+#6 C:\xampp\htdocs\klinik-muhammadiyah\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pasien))
+#7 C:\xampp\htdocs\klinik-muhammadiyah\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\klinik-muhammadiyah\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\klinik-muhammadiyah\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2022-07-06 09:15:05 --> Undefined property: stdClass::$nm_pasie
+#0 C:\xampp\htdocs\klinik-muhammadiyah\app\Views\pasien\v_upasien.php(31): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined prope...', 'C:\\xampp\\htdocs...', 31, Array)
+#1 C:\xampp\htdocs\klinik-muhammadiyah\system\View\View.php(210): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\klinik-muhammadiyah\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp\htdocs\klinik-muhammadiyah\system\Common.php(1089): CodeIgniter\View\View->render('pasien/v_upasie...', Array, true)
+#4 C:\xampp\htdocs\klinik-muhammadiyah\app\Controllers\Pasien.php(57): view('pasien/v_upasie...', Array)
+#5 C:\xampp\htdocs\klinik-muhammadiyah\system\CodeIgniter.php(832): App\Controllers\Pasien->ubah('1')
+#6 C:\xampp\htdocs\klinik-muhammadiyah\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pasien))
+#7 C:\xampp\htdocs\klinik-muhammadiyah\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\klinik-muhammadiyah\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\klinik-muhammadiyah\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2022-07-06 09:16:13 --> Undefined property: stdClass::$nm_pasie
+#0 C:\xampp\htdocs\klinik-muhammadiyah\app\Views\pasien\v_upasien.php(62): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined prope...', 'C:\\xampp\\htdocs...', 62, Array)
+#1 C:\xampp\htdocs\klinik-muhammadiyah\system\View\View.php(210): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\klinik-muhammadiyah\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp\htdocs\klinik-muhammadiyah\system\Common.php(1089): CodeIgniter\View\View->render('pasien/v_upasie...', Array, true)
+#4 C:\xampp\htdocs\klinik-muhammadiyah\app\Controllers\Pasien.php(57): view('pasien/v_upasie...', Array)
+#5 C:\xampp\htdocs\klinik-muhammadiyah\system\CodeIgniter.php(832): App\Controllers\Pasien->ubah('1')
+#6 C:\xampp\htdocs\klinik-muhammadiyah\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pasien))
+#7 C:\xampp\htdocs\klinik-muhammadiyah\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\klinik-muhammadiyah\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\klinik-muhammadiyah\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2022-07-06 09:16:32 --> Undefined property: stdClass::$ALAMAT
+#0 C:\xampp\htdocs\klinik-muhammadiyah\app\Views\pasien\v_upasien.php(70): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined prope...', 'C:\\xampp\\htdocs...', 70, Array)
+#1 C:\xampp\htdocs\klinik-muhammadiyah\system\View\View.php(210): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\klinik-muhammadiyah\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp\htdocs\klinik-muhammadiyah\system\Common.php(1089): CodeIgniter\View\View->render('pasien/v_upasie...', Array, true)
+#4 C:\xampp\htdocs\klinik-muhammadiyah\app\Controllers\Pasien.php(57): view('pasien/v_upasie...', Array)
+#5 C:\xampp\htdocs\klinik-muhammadiyah\system\CodeIgniter.php(832): App\Controllers\Pasien->ubah('1')
+#6 C:\xampp\htdocs\klinik-muhammadiyah\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pasien))
+#7 C:\xampp\htdocs\klinik-muhammadiyah\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\klinik-muhammadiyah\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\klinik-muhammadiyah\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2022-07-06 09:25:44 --> The original file is not a valid file.
+#0 C:\xampp\htdocs\klinik-muhammadiyah\system\HTTP\Files\UploadedFile.php(137): CodeIgniter\HTTP\Exceptions\HTTPException::forInvalidFile()
+#1 C:\xampp\htdocs\klinik-muhammadiyah\app\Controllers\Pasien.php(35): CodeIgniter\HTTP\Files\UploadedFile->move('img/', '1657117544_b915...')
+#2 C:\xampp\htdocs\klinik-muhammadiyah\system\CodeIgniter.php(832): App\Controllers\Pasien->tpasienAksi()
+#3 C:\xampp\htdocs\klinik-muhammadiyah\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pasien))
+#4 C:\xampp\htdocs\klinik-muhammadiyah\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\klinik-muhammadiyah\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 C:\xampp\htdocs\klinik-muhammadiyah\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#7 {main}
+CRITICAL - 2022-07-06 09:26:10 --> Too few arguments to function App\Controllers\Pasien::upasienAksi(), 0 passed in C:\xampp\htdocs\klinik-muhammadiyah\system\CodeIgniter.php on line 832 and exactly 1 expected
+#0 C:\xampp\htdocs\klinik-muhammadiyah\system\CodeIgniter.php(832): App\Controllers\Pasien->upasienAksi()
+#1 C:\xampp\htdocs\klinik-muhammadiyah\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pasien))
+#2 C:\xampp\htdocs\klinik-muhammadiyah\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\klinik-muhammadiyah\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\xampp\htdocs\klinik-muhammadiyah\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#5 {main}
