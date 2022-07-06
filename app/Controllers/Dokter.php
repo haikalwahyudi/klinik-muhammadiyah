@@ -59,7 +59,7 @@ class Dokter extends BaseController
             'foto'            => $namagambar,
             'alamat'          => $this->request->getVar('alamat'),
         ]);
-        session()->setFlashdata('simpan', 'Data berita berhasil disimpan');
+        session()->setFlashdata('simpan', 'Data berhasil disimpan');
         return redirect()->to('/Dokter/ddokter');
     }
     public function udokter($id)

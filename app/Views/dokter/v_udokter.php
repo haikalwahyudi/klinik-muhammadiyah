@@ -62,19 +62,19 @@
                                     <div class="custom-control custom-radio">
                                         <input class="custom-control-input" type="radio" id="customRadio1" <?php if ($data->jk == "Laki-Laki") {
                                                                                                                 echo 'checked';
-                                                                                                            } ?> name="customRadio" value="Laki-Laki" checked>
+                                                                                                            } ?> name="jk" value="Laki-Laki" checked>
                                         <label for="customRadio1" class="custom-control-label">Laki - Laki</label>
                                     </div>
                                     <div class="custom-control custom-radio">
                                         <input class="custom-control-input" type="radio" id="customRadio2" <?php if ($data->jk == "Perempuan") {
                                                                                                                 echo 'checked';
-                                                                                                            } ?> name="customRadio" value="Perempuan">
+                                                                                                            } ?> name="jk" value="Perempuan">
                                         <label for="customRadio2" class="custom-control-label">Perempuan</label>
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label>Jadwal</label>
-                                    <select name="jadwal" class="form-control">
+                                    <select name="id_jadwal" class="form-control">
                                         <?php foreach ($jadwal as $jdwl) { ?>
                                             <option value="<?= $jdwl->id_jadwal ?>" <?php if ($jdwl->id_jadwal == $data->id_jadwal) {
                                                                                         echo 'selected';
