@@ -22,16 +22,4 @@ class Admin extends BaseController
         ];
         return view('admin/v_ddokter', $data);
     }
-    public function detail_dokter()
-    {
-        return view('admin/v_detail_dokter');
-    }
-    public function dpasien()
-    {
-        return view('admin/v_dpasien');
-    }
-    public function detail_pasien()
-    {
-        return view('admin/v_detail_pasien');
-    }
 }

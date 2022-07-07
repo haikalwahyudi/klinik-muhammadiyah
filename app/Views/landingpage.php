@@ -31,17 +31,25 @@
         </div>
       </div> -->
       <a href="#doctors">Jadwal Dokter</a>
-      <div class="dropdown">
+      <a href="#doctors">Konsultasi</a>
+      <a href="<?= base_url() ?>/daftar">Daftar</a>
+      <!-- <div class="dropdown">
         <span>Layanan</span>
         <div class="dropdown-content">
           <a href="login.html">Konsultasi</a>
           <a href="#book">Pendaftaran</a>
           <a href="#">BPJS</a>
         </div>
-      </div>
+      </div> -->
       <!-- <a href="#poli">Poli</a> -->
       <a href="#review">review</a>
-      <span class="login"> <a href="login.html"> Login</a></span>
+      <?php
+      if (session()->get('log_in') == true) {
+      ?>
+        <span class="login"> <a href="<?= base_url(); ?>/login"> Login</a></span>
+      <?php } else { ?>
+        <span class="login"> <a href="<?= base_url(); ?>/Daftar" onclick="return confirm('Anda harus buat akun terlebih dahulu')"> Login</a></span>
+      <?php } ?>
     </nav>
     <div id="menu-btn" class="fas fa-bars"></div>
   </header>

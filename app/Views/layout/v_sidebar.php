@@ -7,10 +7,10 @@
 
   <div class="user-panel pb-3 d-flex bg-white">
     <div class="image">
-      <img src="<?= base_url() ?>/template/dist/img/user2-160x160.jpg" class="img-circle elevation-2 mt-2" alt="User Image" />
+      <img src="<?= base_url() ?>/img/<?= session()->get('foto'); ?>" class="img-circle elevation-2 mt-2" alt="User Image" />
     </div>
     <div class="info mt-2 text-bold">
-      <a href="#" class="d-block text-dark">Ahmad Zamharir</a>
+      <a href="#" class="d-block text-dark"><?= session()->get('nama') ?></a>
     </div>
   </div>
   <!-- Sidebar -->

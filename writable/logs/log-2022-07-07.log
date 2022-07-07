@@ -1,0 +1,53 @@
+CRITICAL - 2022-07-07 08:14:55 --> Call to undefined method App\Models\M_login::cekLogin
+#0 C:\xampp\htdocs\klinik-muhammadiyah\app\Controllers\Login.php(25): CodeIgniter\Model->__call('cekLogin', Array)
+#1 C:\xampp\htdocs\klinik-muhammadiyah\system\CodeIgniter.php(832): App\Controllers\Login->cekLogin()
+#2 C:\xampp\htdocs\klinik-muhammadiyah\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+#3 C:\xampp\htdocs\klinik-muhammadiyah\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\klinik-muhammadiyah\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\klinik-muhammadiyah\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2022-07-07 08:15:57 --> Call to a member function getRow() on null
+#0 C:\xampp\htdocs\klinik-muhammadiyah\system\CodeIgniter.php(832): App\Controllers\Login->cekLogin()
+#1 C:\xampp\htdocs\klinik-muhammadiyah\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+#2 C:\xampp\htdocs\klinik-muhammadiyah\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\klinik-muhammadiyah\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\xampp\htdocs\klinik-muhammadiyah\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#5 {main}
+CRITICAL - 2022-07-07 08:44:32 --> Cannot use object of type stdClass as array
+#0 C:\xampp\htdocs\klinik-muhammadiyah\system\CodeIgniter.php(832): App\Controllers\Login->cekLogin()
+#1 C:\xampp\htdocs\klinik-muhammadiyah\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+#2 C:\xampp\htdocs\klinik-muhammadiyah\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\klinik-muhammadiyah\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\xampp\htdocs\klinik-muhammadiyah\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#5 {main}
+CRITICAL - 2022-07-07 08:45:06 --> Cannot use object of type stdClass as array
+#0 C:\xampp\htdocs\klinik-muhammadiyah\system\CodeIgniter.php(832): App\Controllers\Login->cekLogin()
+#1 C:\xampp\htdocs\klinik-muhammadiyah\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+#2 C:\xampp\htdocs\klinik-muhammadiyah\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\klinik-muhammadiyah\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\xampp\htdocs\klinik-muhammadiyah\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#5 {main}
+CRITICAL - 2022-07-07 09:42:21 --> Call to a member function ambilData() on null
+#0 C:\xampp\htdocs\klinik-muhammadiyah\system\CodeIgniter.php(832): App\Controllers\Daftar->index()
+#1 C:\xampp\htdocs\klinik-muhammadiyah\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Daftar))
+#2 C:\xampp\htdocs\klinik-muhammadiyah\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\klinik-muhammadiyah\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\xampp\htdocs\klinik-muhammadiyah\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#5 {main}
+CRITICAL - 2022-07-07 10:38:38 --> Undefined property: App\Controllers\Daftar::$M_user
+#0 C:\xampp\htdocs\klinik-muhammadiyah\app\Controllers\Daftar.php(21): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined prope...', 'C:\\xampp\\htdocs...', 21, Array)
+#1 C:\xampp\htdocs\klinik-muhammadiyah\system\CodeIgniter.php(832): App\Controllers\Daftar->daftarAksi()
+#2 C:\xampp\htdocs\klinik-muhammadiyah\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Daftar))
+#3 C:\xampp\htdocs\klinik-muhammadiyah\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\klinik-muhammadiyah\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\klinik-muhammadiyah\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2022-07-07 10:40:31 --> unlink(img/default.jpg): No such file or directory
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'unlink(img/defa...', 'C:\\xampp\\htdocs...', 48, Array)
+#1 C:\xampp\htdocs\klinik-muhammadiyah\app\Controllers\User.php(48): unlink('img/default.jpg')
+#2 C:\xampp\htdocs\klinik-muhammadiyah\system\CodeIgniter.php(832): App\Controllers\User->huser('6')
+#3 C:\xampp\htdocs\klinik-muhammadiyah\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#4 C:\xampp\htdocs\klinik-muhammadiyah\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\klinik-muhammadiyah\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 C:\xampp\htdocs\klinik-muhammadiyah\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#7 {main}
