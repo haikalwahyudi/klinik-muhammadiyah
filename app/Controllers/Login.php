@@ -25,21 +25,35 @@ class Login extends BaseController
         $cek = $this->M_login->cariData($email);
         // dd($cek);
         if ($cek != null) {
-            // if ($cek['level'] == 'Admin') {
-            $data_ses = [
-                'nama'      => $cek['nm_user'],
-                'level'     => $cek['level'],
-                'foto'      => $cek['foto'],
-                'log_in'    => true
-            ];
-            if ($cek['password'] == $password) {
-                session()->set($data_ses);
-                return redirect()->to('/admin');
+            if ($cek['level'] == 'Admin' || $cek['level'] == 'Dokter' || $cek['level'] == 'Pimpinan') {
+                $data_ses = [
+                    'nama'      => $cek['nm_user'],
+                    'level'     => $cek['level'],
+                    'foto'      => $cek['foto'],
+                    'log_in'    => true
+                ];
+                if ($cek['password'] == $password) {
+                    session()->set($data_ses);
+                    return redirect()->to('/admin');
+                } else {
+                    session()->setFlashdata('salah', 'Password anda salah');
+                    return redirect()->to('/login');
+                }
             } else {
-                session()->setFlashdata('salah', 'Password anda salah');
-                return redirect()->to('/login');
+                $data_ses = [
+                    'nama'      => $cek['nm_user'],
+                    'level'     => $cek['level'],
+                    'foto'      => $cek['foto'],
+                    'log_in'    => true
+                ];
+                if ($cek['password'] == $password) {
+                    session()->set($data_ses);
+                    return redirect()->to('/Home');
+                } else {
+                    session()->setFlashdata('salah', 'Password anda salah');
+                    return redirect()->to('/login');
+                }
             }
-            // }
         } else {
             session()->setFlashdata('salah', 'Email anda tidak valid');
             return redirect()->to('/login');

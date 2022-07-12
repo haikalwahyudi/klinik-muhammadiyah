@@ -22,8 +22,11 @@
   $db = \Config\Database::connect();
 
   $query = $db->query("SELECT * FROM poli, dokter WHERE poli.id_poli = dokter.id_poli ORDER by id_dokter DESC LIMIT 3");
+  $berita = $db->query("SELECT * FROM berita");
 
   $data = $query->getResult();
+  $dberita = $berita->getResult();
+
   // dd($data);
   ?>
   <!-- End Database -->
@@ -55,7 +58,11 @@
       <!-- <a href="#poli">Poli</a> -->
       <a href="#review">review</a>
 
-      <span class="login"> <a href="<?= base_url(); ?>/login"> Login</a></span>
+      <?php if (session()->get('log_in') == true) { ?>
+        <span class="login"> <a href="<?= base_url(); ?>/login/logout"> Logout</a></span>
+      <?php } else { ?>
+        <span class="login"> <a href="<?= base_url(); ?>/login"> Login</a></span>
+      <?php } ?>
 
     </nav>
     <div id="menu-btn" class="fas fa-bars"></div>
@@ -298,50 +305,27 @@
     <h1 class="heading">our <span>blogs</span></h1>
 
     <div class="box-container">
-      <div class="box">
-        <div class="image">
-          <img src="<?= base_url(); ?>/landingpage/image/blog-1.jpg" alt="" />
-        </div>
-        <div class="content">
-          <div class="icon">
-            <a href="#"> <i class="fas fa-calendar"></i> 1st may, 2021 </a>
-            <a href="#"> <i class="fas fa-user"></i> by admin </a>
-          </div>
-          <h3>blog title goes here</h3>
-          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Provident, eius.</p>
-          <a href="#" class="btn"> Selengkapnya <span class="fas fa-chevron-right"></span> </a>
-        </div>
-      </div>
 
-      <div class="box">
-        <div class="image">
-          <img src="<?= base_url(); ?>/landingpage/image/blog-2.jpg" alt="" />
-        </div>
-        <div class="content">
-          <div class="icon">
-            <a href="#"> <i class="fas fa-calendar"></i> 1st may, 2021 </a>
-            <a href="#"> <i class="fas fa-user"></i> by admin </a>
+      <?php
+      foreach ($dberita as $brt) {
+      ?>
+        <div class="box">
+          <div class="image">
+            <img src="<?= base_url(); ?>/img/<?= $brt->gbr_berita; ?>" alt="" />
           </div>
-          <h3>blog title goes here</h3>
-          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Provident, eius.</p>
-          <a href="#" class="btn"> Selengkapnya <span class="fas fa-chevron-right"></span> </a>
+          <div class="content">
+            <div class="icon">
+              <a href="#"> <i class="fas fa-calendar"></i> <?= $brt->tgl_berita ?> </a>
+              <a href="#"> <i class="fas fa-user"></i> by admin </a>
+            </div>
+            <h3><?= $brt->jdl_berita ?></h3>
+            <p><?= $brt->isi_berita ?></p>
+            <a href="#" class="btn"> Selengkapnya <span class="fas fa-chevron-right"></span> </a>
+          </div>
         </div>
-      </div>
 
-      <div class="box">
-        <div class="image">
-          <img src="<?= base_url(); ?>/landingpage/image/blog-3.jpg" alt="" />
-        </div>
-        <div class="content">
-          <div class="icon">
-            <a href="#"> <i class="fas fa-calendar"></i> 1st may, 2021 </a>
-            <a href="#"> <i class="fas fa-user"></i> by admin </a>
-          </div>
-          <h3>blog title goes here</h3>
-          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Provident, eius.</p>
-          <a href="#" class="btn"> Selengkapnya <span class="fas fa-chevron-right"></span> </a>
-        </div>
-      </div>
+      <?php } ?>
+
     </div>
 
     <center><a href="#" class="btn"> Lihat Selengkapnya <span class="fas fa-chevron-right"></span> </a></center>
