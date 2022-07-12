@@ -52,8 +52,10 @@
             </div>
             <form action="<?= base_url(); ?>/Daftar/daftarAksi" method="POST">
                 <h3>Buat Akun</h3>
-                <?= session()->getFlashdata('simpan') ?>
-                <div class="alert alert-warning">
+                <div style="background-color:#66BFBF; border-radius:15px;" id="notif">
+                    <?= session()->getFlashdata('simpan'); ?>
+                </div>
+                <div style="background-color:#66BFBF; border-radius:15px;" id="notif">
                     <?= session()->getFlashdata('salah'); ?>
                 </div>
                 <input name="nama" placeholder="masukkan Nama" class="box" required />
@@ -86,6 +88,13 @@
 
     <!-- custom js file link  -->
     <script src="<?= base_url(); ?>/landingpage/js/script.js"></script>
+    <script>
+        setTimeout(function() {
+            $('#notif').fadeTo(500, 0).slideUp(500, function() {
+                $(this).remove();
+            })
+        }, 9000);
+    </script>
 </body>
 
 </html>

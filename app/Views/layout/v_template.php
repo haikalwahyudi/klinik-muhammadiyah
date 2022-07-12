@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -32,106 +33,118 @@
   <link rel="stylesheet" href="<?= base_url() ?>/template/plugins/datatables-buttons/css/buttons.bootstrap4.min.css">
   <link rel="stylesheet" href="<?= base_url() ?>/template/datatables/datatables.min.css">
 </head>
+
 <body class="hold-transition sidebar-mini layout-fixed">
-<div class="wrapper">
+  <div class="wrapper">
 
-  <!-- Preloader -->
- 
+    <!-- Preloader -->
 
-  <!-- Navbar -->
 
-  <?= $this->include("layout/v_header"); ?>
-  <!-- /.navbar -->
+    <!-- Navbar -->
 
-  <!-- Main Sidebar Container -->
-  <?= $this->include("layout/v_sidebar"); ?>
-  <!-- sidebar -->
+    <?= $this->include("layout/v_header"); ?>
+    <!-- /.navbar -->
 
-  <!-- /sidebar -->
-  <!-- Content Wrapper. Contains page content -->
-  <?= $this->renderSection("isi"); ?>
-  <!-- /.content-wrapper -->
-  <!-- footer -->
-  <?= $this->include("layout/v_footer"); ?>
-  <!--/footer -->
+    <!-- Main Sidebar Container -->
+    <?= $this->include("layout/v_sidebar"); ?>
+    <!-- sidebar -->
 
-  <!-- Control Sidebar -->
-  <aside class="control-sidebar control-sidebar-dark">
-    <!-- Control sidebar content goes here -->
-  </aside>
-  <!-- /.control-sidebar -->
-</div>
-<!-- ./wrapper -->
+    <!-- /sidebar -->
+    <!-- Content Wrapper. Contains page content -->
+    <?= $this->renderSection("isi"); ?>
+    <!-- /.content-wrapper -->
+    <!-- footer -->
+    <?= $this->include("layout/v_footer"); ?>
+    <!--/footer -->
 
-<!-- jQuery -->
-<script src="<?= base_url() ?>/template/plugins/jquery/jquery.min.js"></script>
-<!-- jQuery UI 1.11.4 -->
-<script src="<?= base_url() ?>/template/plugins/jquery-ui/jquery-ui.min.js"></script>
-<!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
-<script>
-  $.widget.bridge('uibutton', $.ui.button)
-</script>
-<!-- Bootstrap 4 -->
-<script src="<?= base_url() ?>/template/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
-<!-- ChartJS -->
-<script src="<?= base_url() ?>/template/plugins/chart.js/Chart.min.js"></script>
-<!-- Sparkline -->
-<script src="<?= base_url() ?>/template/plugins/sparklines/sparkline.js"></script>
-<!-- JQVMap -->
-<script src="<?= base_url() ?>/template/plugins/jqvmap/jquery.vmap.min.js"></script>
-<script src="<?= base_url() ?>/template/plugins/jqvmap/maps/jquery.vmap.usa.js"></script>
-<!-- jQuery Knob Chart -->
-<script src="<?= base_url() ?>/template/plugins/jquery-knob/jquery.knob.min.js"></script>
-<!-- daterangepicker -->
-<script src="<?= base_url() ?>/template/plugins/moment/moment.min.js"></script>
-<script src="<?= base_url() ?>/template/plugins/daterangepicker/daterangepicker.js"></script>
-<!-- Tempusdominus Bootstrap 4 -->
-<script src="<?= base_url() ?>/template/plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js"></script>
-<!-- Summernote -->
-<script src="<?= base_url() ?>/template/plugins/summernote/summernote-bs4.min.js"></script>
-<!-- overlayScrollbars -->
-<script src="<?= base_url() ?>/template/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
-<!-- AdminLTE App -->
-<script src="<?= base_url() ?>/template/dist/js/adminlte.js"></script>
-<!-- AdminLTE for demo purposes -->
-<!-- AdminLTE dashboard demo (This is only for demo purposes) -->
+    <!-- Control Sidebar -->
+    <aside class="control-sidebar control-sidebar-dark">
+      <!-- Control sidebar content goes here -->
+    </aside>
+    <!-- /.control-sidebar -->
+  </div>
+  <!-- ./wrapper -->
 
-<!-- DataTables  & Plugins -->
-<script src="<?= base_url() ?>/template/plugins/datatables/jquery.dataTables.min.js"></script>
-<script src="<?= base_url() ?>/template/plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
-<script src="<?= base_url() ?>/template/plugins/datatables-responsive/js/dataTables.responsive.min.js"></script>
-<script src="<?= base_url() ?>/template/plugins/datatables-responsive/js/responsive.bootstrap4.min.js"></script>
-<script src="<?= base_url() ?>/template/plugins/datatables-buttons/js/dataTables.buttons.min.js"></script>
-<script src="<?= base_url() ?>/template/plugins/datatables-buttons/js/buttons.bootstrap4.min.js"></script>
-<script src="<?= base_url() ?>/template/plugins/jszip/jszip.min.js"></script>
-<script src="<?= base_url() ?>/template/plugins/pdfmake/pdfmake.min.js"></script>
-<script src="<?= base_url() ?>/template/plugins/pdfmake/vfs_fonts.js"></script>
-<script src="<?= base_url() ?>/template/plugins/datatables-buttons/js/buttons.html5.min.js"></script>
-<script src="<?= base_url() ?>/template/plugins/datatables-buttons/js/buttons.print.min.js"></script>
-<script src="<?= base_url() ?>/template/plugins/datatables-buttons/js/buttons.colVis.min.js"></script>
+  <!-- jQuery -->
+  <script src="<?= base_url() ?>/template/plugins/jquery/jquery.min.js"></script>
+  <!-- jQuery UI 1.11.4 -->
+  <script src="<?= base_url() ?>/template/plugins/jquery-ui/jquery-ui.min.js"></script>
+  <!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
+  <script>
+    $.widget.bridge('uibutton', $.ui.button)
+  </script>
+  <!-- Bootstrap 4 -->
+  <script src="<?= base_url() ?>/template/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <!-- ChartJS -->
+  <script src="<?= base_url() ?>/template/plugins/chart.js/Chart.min.js"></script>
+  <!-- Sparkline -->
+  <script src="<?= base_url() ?>/template/plugins/sparklines/sparkline.js"></script>
+  <!-- JQVMap -->
+  <script src="<?= base_url() ?>/template/plugins/jqvmap/jquery.vmap.min.js"></script>
+  <script src="<?= base_url() ?>/template/plugins/jqvmap/maps/jquery.vmap.usa.js"></script>
+  <!-- jQuery Knob Chart -->
+  <script src="<?= base_url() ?>/template/plugins/jquery-knob/jquery.knob.min.js"></script>
+  <!-- daterangepicker -->
+  <script src="<?= base_url() ?>/template/plugins/moment/moment.min.js"></script>
+  <script src="<?= base_url() ?>/template/plugins/daterangepicker/daterangepicker.js"></script>
+  <!-- Tempusdominus Bootstrap 4 -->
+  <script src="<?= base_url() ?>/template/plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js"></script>
+  <!-- Summernote -->
+  <script src="<?= base_url() ?>/template/plugins/summernote/summernote-bs4.min.js"></script>
+  <!-- overlayScrollbars -->
+  <script src="<?= base_url() ?>/template/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
+  <!-- AdminLTE App -->
+  <script src="<?= base_url() ?>/template/dist/js/adminlte.js"></script>
+  <!-- AdminLTE for demo purposes -->
+  <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
 
-<script>
-  $(function () {
-    $("#example1").DataTable({
-      "responsive": true, "lengthChange": false, "autoWidth": false,
-      "buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"]
-    }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
-    $('#example2').DataTable({
-      "paging": true,
-      "lengthChange": false,
-      "searching": false,
-      "ordering": true,
-      "info": true,
-      "autoWidth": false,
-      "responsive": true,
+  <!-- DataTables  & Plugins -->
+  <script src="<?= base_url() ?>/template/plugins/datatables/jquery.dataTables.min.js"></script>
+  <script src="<?= base_url() ?>/template/plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
+  <script src="<?= base_url() ?>/template/plugins/datatables-responsive/js/dataTables.responsive.min.js"></script>
+  <script src="<?= base_url() ?>/template/plugins/datatables-responsive/js/responsive.bootstrap4.min.js"></script>
+  <script src="<?= base_url() ?>/template/plugins/datatables-buttons/js/dataTables.buttons.min.js"></script>
+  <script src="<?= base_url() ?>/template/plugins/datatables-buttons/js/buttons.bootstrap4.min.js"></script>
+  <script src="<?= base_url() ?>/template/plugins/jszip/jszip.min.js"></script>
+  <script src="<?= base_url() ?>/template/plugins/pdfmake/pdfmake.min.js"></script>
+  <script src="<?= base_url() ?>/template/plugins/pdfmake/vfs_fonts.js"></script>
+  <script src="<?= base_url() ?>/template/plugins/datatables-buttons/js/buttons.html5.min.js"></script>
+  <script src="<?= base_url() ?>/template/plugins/datatables-buttons/js/buttons.print.min.js"></script>
+  <script src="<?= base_url() ?>/template/plugins/datatables-buttons/js/buttons.colVis.min.js"></script>
+
+  <script>
+    setTimeout(function() {
+      $('#notif').fadeTo(500, 0).slideUp(500, function() {
+        $(this).remove();
+      })
+    }, 2000);
+  </script>
+
+  <script>
+    $(function() {
+      $("#example1").DataTable({
+        "responsive": true,
+        "lengthChange": false,
+        "autoWidth": false,
+        "buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"]
+      }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
+      $('#example2').DataTable({
+        "paging": true,
+        "lengthChange": false,
+        "searching": false,
+        "ordering": true,
+        "info": true,
+        "autoWidth": false,
+        "responsive": true,
+      });
     });
-  });
-</script>
-<script src="<?= base_url() ?>/template/datatables/datatables.min.js"></script>
-<script>
-$(document).ready( function () {
-    $('#myTable').DataTable();
-} );
-</script>
+  </script>
+  <script src="<?= base_url() ?>/template/datatables/datatables.min.js"></script>
+  <script>
+    $(document).ready(function() {
+      $('#myTable').DataTable();
+    });
+  </script>
 </body>
+
 </html>

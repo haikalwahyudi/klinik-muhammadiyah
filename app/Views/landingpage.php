@@ -17,6 +17,17 @@
 <body>
   <!-- header section starts  -->
 
+  <!-- Database -->
+  <?php
+  $db = \Config\Database::connect();
+
+  $query = $db->query("SELECT * FROM poli, dokter WHERE poli.id_poli = dokter.id_poli ORDER by id_dokter DESC LIMIT 3");
+
+  $data = $query->getResult();
+  // dd($data);
+  ?>
+  <!-- End Database -->
+
   <header class="header">
     <img src="<?= base_url(); ?>/landingpage/image/LOGO WEB.png" width="200px" alt="" />
 
@@ -43,13 +54,9 @@
       </div> -->
       <!-- <a href="#poli">Poli</a> -->
       <a href="#review">review</a>
-      <?php
-      if (session()->get('log_in') == true) {
-      ?>
-        <span class="login"> <a href="<?= base_url(); ?>/login"> Login</a></span>
-      <?php } else { ?>
-        <span class="login"> <a href="<?= base_url(); ?>/Daftar" onclick="return confirm('Anda harus buat akun terlebih dahulu')"> Login</a></span>
-      <?php } ?>
+
+      <span class="login"> <a href="<?= base_url(); ?>/login"> Login</a></span>
+
     </nav>
     <div id="menu-btn" class="fas fa-bars"></div>
   </header>
@@ -161,7 +168,7 @@
 
     <div class="row">
       <div class="image">
-        <img src="image/about-img.svg" alt="" />
+        <img src="<?= base_url(); ?>/landingpage/image/about-img.svg" alt="" />
       </div>
 
       <div class="content">
@@ -181,78 +188,23 @@
     <h1 class="heading">our <span>doctors</span></h1>
 
     <div class="box-container">
-      <div class="box">
-        <img src="image/doc-1.jpg" alt="" />
-        <h3>dr. KADEK ADI WIGUNA, Sp.B</h3>
-        <span>Spesialis Bedah</span>
-        <div class="share">
-          <a href="#" class="fab fa-facebook-f"></a>
-          <a href="#" class="fab fa-twitter"></a>
-          <a href="#" class="fab fa-instagram"></a>
-          <a href="#" class="fab fa-whatsapp"></a>
-        </div>
-      </div>
 
-      <div class="box">
-        <img src="image/doc-2.jpg" alt="" />
-        <h3>dr. IDA BAGUS GEDE PUTERA BRAHMANSA</h3>
-        <span>Dokter Umum</span>
-        <div class="share">
-          <a href="#" class="fab fa-facebook-f"></a>
-          <a href="#" class="fab fa-twitter"></a>
-          <a href="#" class="fab fa-instagram"></a>
-          <a href="#" class="fab fa-whatsapp"></a>
+      <?php foreach ($data as $d) { ?>
+        <div class="box">
+          <img src="<?= base_url(); ?>/img/<?= $d->foto; ?>" alt="Foto" />
+          <h3><?= $d->nm_dokter; ?></h3>
+          <span><?= $d->nm_poli ?></span>
+          <div class="share">
+            <a href="#" class="fab fa-facebook-f"></a>
+            <a href="#" class="fab fa-twitter"></a>
+            <a href="#" class="fab fa-instagram"></a>
+            <a href="#" class="fab fa-whatsapp"></a>
+          </div>
         </div>
-      </div>
-
-      <div class="box">
-        <img src="image/doc-3.jpg" alt="" />
-        <h3>dr. MOEHAMMAD RIEZFI HASYIMI</h3>
-        <span>Dokter Umum</span>
-        <div class="share">
-          <a href="#" class="fab fa-facebook-f"></a>
-          <a href="#" class="fab fa-twitter"></a>
-          <a href="#" class="fab fa-instagram"></a>
-          <a href="#" class="fab fa-whatsapp"></a>
-        </div>
-      </div>
-
-      <div class="box">
-        <img src="image/doc-4.jpg" alt="" />
-        <h3>dr. NI KADEK SUCIARTINI</h3>
-        <span>Dokter Umum</span>
-        <div class="share">
-          <a href="#" class="fab fa-facebook-f"></a>
-          <a href="#" class="fab fa-twitter"></a>
-          <a href="#" class="fab fa-instagram"></a>
-          <a href="#" class="fab fa-whatsapp"></a>
-        </div>
-      </div>
-
-      <div class="box">
-        <img src="image/doc-5.jpg" alt="" />
-        <h3>dr. AHMAD HAERUL UMAM</h3>
-        <span>Direktur/Dokter Umum</span>
-        <div class="share">
-          <a href="#" class="fab fa-facebook-f"></a>
-          <a href="#" class="fab fa-twitter"></a>
-          <a href="#" class="fab fa-instagram"></a>
-          <a href="#" class="fab fa-whatsapp"></a>
-        </div>
-      </div>
-
-      <div class="box">
-        <img src="image/doc-6.jpg" alt="" />
-        <h3>dr. ZAKARIA, MMR</h3>
-        <span>Dokter Umum</span>
-        <div class="share">
-          <a href="#" class="fab fa-facebook-f"></a>
-          <a href="#" class="fab fa-twitter"></a>
-          <a href="#" class="fab fa-instagram"></a>
-          <a href="#" class="fab fa-whatsapp"></a>
-        </div>
-      </div>
+      <?php } ?>
     </div>
+
+    <center><a href="#" class="btn"> Lihat Selengkapnya <span class="fas fa-chevron-right"></span> </a></center>
   </section>
 
   <!-- doctors section ends -->
@@ -264,7 +216,7 @@
 
     <div class="row">
       <div class="image">
-        <img src="image/book-img.svg" alt="" />
+        <img src="<?= base_url(); ?>/landingpage/image/book-img.svg" alt="" />
       </div>
 
       <form action="">
@@ -287,7 +239,7 @@
 
     <div class="box-container">
       <div class="box">
-        <img src="image/pic-1.png" alt="" />
+        <img src="<?= base_url(); ?>/landingpage/image/pic-1.png" alt="" />
         <h3>john deo</h3>
         <div class="stars">
           <i class="fas fa-star"></i>
@@ -303,7 +255,7 @@
       </div>
 
       <div class="box">
-        <img src="image/pic-2.png" alt="" />
+        <img src="<?= base_url(); ?>/landingpage/image/pic-2.png" alt="" />
         <h3>john deo</h3>
         <div class="stars">
           <i class="fas fa-star"></i>
@@ -319,7 +271,7 @@
       </div>
 
       <div class="box">
-        <img src="image/pic-3.png" alt="" />
+        <img src="<?= base_url(); ?>/landingpage/image/pic-3.png" alt="" />
         <h3>john deo</h3>
         <div class="stars">
           <i class="fas fa-star"></i>
@@ -334,6 +286,8 @@
         </p>
       </div>
     </div>
+
+    <center><a href="#" class="btn"> Lihat Selengkapnya <span class="fas fa-chevron-right"></span> </a></center>
   </section>
 
   <!-- review section ends -->
@@ -346,7 +300,7 @@
     <div class="box-container">
       <div class="box">
         <div class="image">
-          <img src="image/blog-1.jpg" alt="" />
+          <img src="<?= base_url(); ?>/landingpage/image/blog-1.jpg" alt="" />
         </div>
         <div class="content">
           <div class="icon">
@@ -361,7 +315,7 @@
 
       <div class="box">
         <div class="image">
-          <img src="image/blog-2.jpg" alt="" />
+          <img src="<?= base_url(); ?>/landingpage/image/blog-2.jpg" alt="" />
         </div>
         <div class="content">
           <div class="icon">
@@ -376,7 +330,7 @@
 
       <div class="box">
         <div class="image">
-          <img src="image/blog-3.jpg" alt="" />
+          <img src="<?= base_url(); ?>/landingpage/image/blog-3.jpg" alt="" />
         </div>
         <div class="content">
           <div class="icon">
@@ -389,6 +343,8 @@
         </div>
       </div>
     </div>
+
+    <center><a href="#" class="btn"> Lihat Selengkapnya <span class="fas fa-chevron-right"></span> </a></center>
   </section>
 
   <!-- blogs section ends -->

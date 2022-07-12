@@ -25,7 +25,7 @@ class Daftar extends BaseController
             'username'  => '',
             'password'  => $this->request->getVar('password'),
             'level'     => 'Pasien',
-            'foto'      => 'default.jpg',
+            'foto'      => 'default.png',
         ]);
         session()->setFlashdata('simpan', 'Data Pengguna berhasil dibuat');
         return redirect()->to('/Daftar');

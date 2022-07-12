@@ -39,20 +39,23 @@ class User extends BaseController
             'level'     => $this->request->getVar('level'),
             'foto'      => $namagambar,
         ]);
-        session()->setFlashdata('simpan','Data User berhasil disimpan');
+        session()->setFlashdata('simpan', 'Data User berhasil disimpan');
         return redirect()->to('/User/duser');
     }
     public function huser($id)
     {
         $gambar = $this->M_user->ambilData($id)->getRow();
-        unlink('img/'. $gambar->foto);
+        // dd($gambar);
+        if ($gambar->foto != 'default.png') {
+            unlink('img/' . $gambar->foto);
+        }
         $this->M_user->hapus($id);
-        session()->setFlashdata('hapus','Data berita berhasil dihapus');
+        session()->setFlashdata('hapus', 'Data berita berhasil dihapus');
         return redirect()->to('/User/duser');
     }
     public function uuser($id)
     {
-        $data =[
+        $data = [
             'data'  => $this->M_user->ambilData($id)->getRow()
         ];
         return view('user/v_uuser', $data);
@@ -60,15 +63,19 @@ class User extends BaseController
     public function uuserAksi()
     {
         $kd = $this->request->getVar('id');
+        $cari = $this->M_user->ambilData($kd)->getRow();
+        // dd($cari);
         $gambar = $this->request->getFile('foto');
 
-        if($gambar->getError() === 4){
+        if ($gambar->getError() === 4) {
             $Gambar_lama = $this->request->getVar('old_foto');
             $namagambar = $Gambar_lama;
-        }else{
+        } else {
             $namagambar = $gambar->getRandomName();
             $gambar->move('img/', $namagambar);
-            unlink('img/'.$this->request->getVar('old_foto'));
+            if ($cari->foto != 'default.png') {
+                unlink('img/' . $this->request->getVar('old_foto'));
+            }
         }
 
         $this->M_user->ubah([
@@ -79,9 +86,9 @@ class User extends BaseController
             'password'  => $this->request->getVar('password'),
             'level'     => $this->request->getVar('level'),
             'foto'      => $namagambar,
-        ],$kd);
+        ], $kd);
 
-        session()->setFlashdata('ubah','Data berita berhasil diubah');
+        session()->setFlashdata('ubah', 'Data berita berhasil diubah');
         return redirect()->to('/User/duser');
     }
 }

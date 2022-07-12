@@ -23,19 +23,19 @@
                 <div class="col-md-12">
                     <!-- Alert -->
                     <?php if (session()->getFlashdata('ubah')) { ?>
-                        <div class="alert alert-success alert-dismissible">
+                        <div class="alert alert-success alert-dismissible" id="notif">
                             <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
                             <h5><i class="icon fas fa-check"></i> Alert!</h5>
                             <?= session()->getFlashdata('ubah'); ?>
                         </div>
                     <?php } elseif (session()->getFlashdata('hapus')) { ?>
-                        <div class="alert alert-danger alert-dismissible">
+                        <div class="alert alert-danger alert-dismissible" id="notif">
                             <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
                             <h5><i class="icon fas fa-check"></i> Alert!</h5>
                             <?= session()->getFlashdata('hapus'); ?>
                         </div>
                     <?php } elseif (session()->getFlashdata('simpan')) { ?>
-                        <div class="alert alert-success alert-dismissible">
+                        <div class="alert alert-success alert-dismissible" id="notif">
                             <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
                             <h5><i class="icon fas fa-check"></i> Alert!</h5>
                             <?= session()->getFlashdata('simpan'); ?>

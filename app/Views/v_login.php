@@ -53,13 +53,13 @@
 
             <form action="<?= base_url(); ?>/Login/cekLogin" method="POST">
                 <h3>Login</h3>
-                <div class="alert alert-warning">
+                <div style="background-color:#ffb0b0; border-radius:15px;" id="notif">
                     <?= session()->getFlashdata('salah'); ?>
                 </div>
                 <input type="username" name="email" placeholder="masukkan Email" class="box" required />
                 <input type="password" name="password" placeholder="masukkan password" class="box" required />
                 <input type="submit" value="Login" class="btn" />
-                <input type="submit" value="Register" class="btn" />
+                <a href="<?= base_url(); ?>/Daftar" class="btn">Register</a>
             </form>
         </div>
     </section>
@@ -79,11 +79,19 @@
     <section class="footer">
         <div class="credit">created by <span>Bale Studio</span> | all rights reserved</div>
     </section>
-
     <!-- footer section ends -->
 
+    <script>
+        setTimeout(function() {
+            $('#notif').fadeTo(500, 0).slideUp(500, function() {
+                $(this).remove();
+            })
+        }, 9000);
+    </script>
     <!-- custom js file link  -->
     <script src="<?= base_url(); ?>/landingpage/js/script.js"></script>
+    <!-- Close Alert -->
+
 </body>
 
 </html>
