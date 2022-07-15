@@ -45,7 +45,8 @@
         </div>
       </div> -->
       <a href="#doctors">Jadwal Dokter</a>
-      <a href="#doctors">Konsultasi</a>
+      <a href="<?= base_url(); ?>/Chat">Konsultasi</a>
+      <!-- <a href="#doctors">Konsultasi</a> -->
       <a href="<?= base_url() ?>/daftar">Daftar</a>
       <!-- <div class="dropdown">
         <span>Layanan</span>

@@ -156,6 +156,23 @@
               </p>
             </a>
           </li>
+        <?php } elseif (session()->get('level') == 'Pasien') { ?>
+          <li class="nav-item">
+            <a href="<?= base_url(); ?>/Chat" class="nav-link">
+              <i class="nav-icon fa fa-home text-light"></i>
+              <p class="text-light">
+                Beranda
+              </p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="<?= base_url(); ?>/Home" class="nav-link">
+              <i class="nav-icon fa fa-home text-light"></i>
+              <p class="text-light">
+                Landing Page
+              </p>
+            </a>
+          </li>
         <?php } ?>
       </ul>
     </nav>

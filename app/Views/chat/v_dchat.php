@@ -26,8 +26,8 @@
             <!-- Small boxes (Stat box) -->
             <div class="row">
                 <?php foreach ($data as $d) { ?>
-                    <div class="col-12 col-sm-6 col-md-4">
-                        <div class="card bg-light">
+                    <div class="col-12 col-sm-6 col-md-4 mb-4">
+                        <div class="card bg-light h-100">
                             <div class="card-header text-muted border-bottom-0">
                                 Digital Strategist
                             </div>
@@ -48,7 +48,7 @@
                             </div>
                             <div class="card-footer">
                                 <div class="text-right">
-                                    <a href="#" class="btn btn-sm bg-teal">
+                                    <a href="<?= base_url(); ?>/Chat/chat/<?= $d->id_dokter; ?>" class="btn btn-sm bg-teal">
                                         <i class="fas fa-comment"></i> Live Chat
                                     </a>
                                     <!-- <a href="#" class="btn btn-sm btn-primary">

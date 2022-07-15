@@ -30,6 +30,7 @@ class Login extends BaseController
                     'nama'      => $cek['nm_user'],
                     'level'     => $cek['level'],
                     'foto'      => $cek['foto'],
+                    'id'        => $cek['id_user'],
                     'log_in'    => true
                 ];
                 if ($cek['password'] == $password) {
@@ -44,6 +45,7 @@ class Login extends BaseController
                     'nama'      => $cek['nm_user'],
                     'level'     => $cek['level'],
                     'foto'      => $cek['foto'],
+                    'id'        => $cek['id_user'],
                     'log_in'    => true
                 ];
                 if ($cek['password'] == $password) {

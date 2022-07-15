@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 04, 2022 at 04:38 PM
+-- Generation Time: Jul 14, 2022 at 02:17 PM
 -- Server version: 10.4.19-MariaDB
 -- PHP Version: 7.4.20
 
@@ -40,7 +40,21 @@ CREATE TABLE `berita` (
 --
 
 INSERT INTO `berita` (`id_berita`, `jdl_berita`, `isi_berita`, `tgl_berita`, `gbr_berita`) VALUES
-(10, 'dsfsd', 'dsfsd', '2022-06-29', '1656512334_280123ce4d3628697ef6.jpg');
+(10, 'dsfsd', 'dsfsd', '2022-06-29', '1656512334_280123ce4d3628697ef6.jpg'),
+(12, 'kjhkj', 'skfhsdkj', '2022-07-12', '1657633319_f4e1b732d25a45fe6e64.jpg');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `chat`
+--
+
+CREATE TABLE `chat` (
+  `id` int(11) NOT NULL,
+  `id_dokter` int(11) NOT NULL,
+  `id_user` int(11) NOT NULL,
+  `pesan` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
@@ -61,6 +75,19 @@ CREATE TABLE `dokter` (
   `foto` varchar(255) NOT NULL,
   `alamat` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `dokter`
+--
+
+INSERT INTO `dokter` (`id_dokter`, `nm_dokter`, `id_poli`, `tempat_lahir`, `tgl_lahir`, `email`, `nohp`, `jk`, `id_jadwal`, `foto`, `alamat`) VALUES
+(6, 'bbb', 10, 'bbb', '2022-07-04', 'bbbb@gmail.com', '2222', 'Perempuan', 2, '1657112768_26f26abfe26492954926.png', 'bbb'),
+(7, 'Haikal Wahyudi', 7, 'Masbagik', '2022-06-28', 'udin@gmail.com', '12345678', 'Laki-Laki', 1, '1657295653_33d2a6ecea17cb9fdab2.jpg', 'skjhdas'),
+(8, 'Udang', 8, 'Penakak', '2022-06-28', 'aa@gmail.com', '1234567', 'Perempuan', 1, '1657295694_0b3ec8425be71630876e.png', 'sakdjgas'),
+(9, 'skdjh', 6, 'jhgjh', '6786-08-07', 'ash@gmail.com', '654', 'Perempuan', 1, '1657296112_de143cf16f2d13de2c24.png', 'sdjkf'),
+(10, 'jsdhfk', 9, 'shakj', '2022-07-05', 'sg@gmail.com', '9183', 'Laki-Laki', 1, '1657296190_a43a938550663905bba8.jpg', 'sdjkf'),
+(11, 'SDKJHF', 8, 'SKDJHF', '2022-07-02', 'udin@gmail.com', '2342', 'Perempuan', 2, '1657296904_7229a65bef4376795365.png', 'ASJHD'),
+(12, 'fghjk,', 8, 'vbnm', '2022-07-07', 'dfghj@gmail.com', '5677', 'Perempuan', 2, '1657297177_15aade563146959304bc.png', 'qerth');
 
 -- --------------------------------------------------------
 
@@ -122,6 +149,13 @@ CREATE TABLE `pasien` (
   `alamat` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Dumping data for table `pasien`
+--
+
+INSERT INTO `pasien` (`id_pasien`, `nm_pasien`, `tempat_lahir`, `tgl_lahir`, `nohp`, `email`, `jk`, `keluhan`, `foto`, `alamat`) VALUES
+(1, 'Hiakl Wahyudi', 'Penakak', '2022-06-28', '23456789', 'haikal@gmial.com', 'Laki-Laki', 'kjahsd askdjh sak', '1657116349_3054e89523e75a95ddb5.png', 'lklashdkjasd');
+
 -- --------------------------------------------------------
 
 --
@@ -163,7 +197,9 @@ INSERT INTO `poli` (`id_poli`, `nm_poli`, `desk_poli`) VALUES
 (8, 'Poli Umum', 'Pemeriksaan Umum'),
 (9, 'Poli Mata', 'Mata Kaki'),
 (10, 'sa', 'sa'),
-(11, 'aa', 'aa');
+(11, 'aa', 'aa'),
+(12, 'sscsa', 'sfsd'),
+(13, 'lk', 'alksdj');
 
 -- --------------------------------------------------------
 
@@ -211,6 +247,16 @@ CREATE TABLE `user` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
+-- Dumping data for table `user`
+--
+
+INSERT INTO `user` (`id_user`, `nm_user`, `email`, `nohp`, `username`, `password`, `level`, `foto`) VALUES
+(5, 'skdjhf', 'tes@gmail.com', '2983', 'shdjk', '1234', 'Admin', '1657118709_8c74ca13cf8095582bbc.png'),
+(6, 'Haikal Wahyudi', 'admin@gmail.com', '87212', 'sss', '1234', 'Dokter', '1657285547_3c70a5452e353a975f35.jpg'),
+(9, 'sdf', 'udang@gmail.com', '234', 'as', '1234', 'Pimpinan', 'default.png'),
+(12, 'Haikal Wahyudi', 'uu@gmail.com', '1234', '', '1234', 'Pasien', 'default.png');
+
+--
 -- Indexes for dumped tables
 --
 
@@ -219,6 +265,12 @@ CREATE TABLE `user` (
 --
 ALTER TABLE `berita`
   ADD PRIMARY KEY (`id_berita`);
+
+--
+-- Indexes for table `chat`
+--
+ALTER TABLE `chat`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `dokter`
@@ -282,19 +334,25 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT for table `berita`
 --
 ALTER TABLE `berita`
-  MODIFY `id_berita` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `id_berita` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+
+--
+-- AUTO_INCREMENT for table `chat`
+--
+ALTER TABLE `chat`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `dokter`
 --
 ALTER TABLE `dokter`
-  MODIFY `id_dokter` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_dokter` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- AUTO_INCREMENT for table `fasilitas`
 --
 ALTER TABLE `fasilitas`
-  MODIFY `id_fasilitas` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id_fasilitas` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `jadwal`
@@ -306,7 +364,7 @@ ALTER TABLE `jadwal`
 -- AUTO_INCREMENT for table `pasien`
 --
 ALTER TABLE `pasien`
-  MODIFY `id_pasien` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_pasien` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `pendaftaran`
@@ -318,7 +376,7 @@ ALTER TABLE `pendaftaran`
 -- AUTO_INCREMENT for table `poli`
 --
 ALTER TABLE `poli`
-  MODIFY `id_poli` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `id_poli` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
 -- AUTO_INCREMENT for table `review`
@@ -336,7 +394,7 @@ ALTER TABLE `sosmed`
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
