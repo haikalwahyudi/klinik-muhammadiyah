@@ -138,6 +138,14 @@
               </p>
             </a>
           </li>
+          <li class="nav-item">
+            <a href="<?= base_url(); ?>/Konsultasi" class="nav-link">
+              <i class="nav-icon far fa-comment text-light"></i>
+              <p class="text-light">
+                Konsultasi
+              </p>
+            </a>
+          </li>
         <?php } elseif (session()->get('level') == 'Pimpinan') { ?>
           <li class="nav-item">
             <a href="<?= base_url(); ?>/Admin/index" class="nav-link">
@@ -166,10 +174,18 @@
             </a>
           </li>
           <li class="nav-item">
-            <a href="<?= base_url(); ?>/Home" class="nav-link">
-              <i class="nav-icon fa fa-home text-light"></i>
+            <a href="<?= base_url(); ?>/Review" class="nav-link">
+              <i class="nav-icon fa fa-star text-light"></i>
               <p class="text-light">
-                Landing Page
+                Review
+              </p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="<?= base_url(); ?>/Home" class="nav-link">
+              <i class="nav-icon fa fa-user text-light"></i>
+              <p class="text-light">
+                Profile
               </p>
             </a>
           </li>

@@ -72,7 +72,7 @@
                         </div>
                         <div class="card-footer">
                             <Button class="btn btn-success">Simpan</Button>
-                            <a href="<?= base_url(); ?>/Dokter/ddokter" class="btn btn-danger">Batal</a>
+                            <a href="<?= base_url(); ?>/Pasien/dpasien" class="btn btn-danger">Batal</a>
                         </div>
                         </form>
                         <!-- /.card-body -->

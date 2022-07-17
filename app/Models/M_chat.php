@@ -20,4 +20,9 @@ class M_chat extends Model
         $simpan = $this->db->table($this->table);
         return $simpan->insert($data);
     }
+    public function dataKosultasi()
+    {
+        return $this->db->table($this->table)
+            ->where(['id_dokter' => session()->get('id_dokter')]);
+    }
 }

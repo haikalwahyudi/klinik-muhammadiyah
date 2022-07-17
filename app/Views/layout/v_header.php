@@ -6,7 +6,7 @@
       <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars text-white"></i></a>
     </li>
     <li class="nav-item d-none d-sm-inline-block ">
-      <a href="index3.html" class="nav-link text-white">Home</a>
+      <a href="<?= base_url(); ?>/Home" class="nav-link text-white">Home</a>
     </li>
     <!-- <li class="nav-item d-none d-sm-inline-block">
       <a href="<?= base_url(); ?>/login/logout" onclick="return confirm('Yakin Ingin Keluar?')" class="nav-link text-white">Logout</a>

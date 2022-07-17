@@ -31,6 +31,7 @@ class Login extends BaseController
                     'level'     => $cek['level'],
                     'foto'      => $cek['foto'],
                     'id'        => $cek['id_user'],
+                    'id_dokter' => $cek['id_dokter'],
                     'log_in'    => true
                 ];
                 if ($cek['password'] == $password) {

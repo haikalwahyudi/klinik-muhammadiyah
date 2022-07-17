@@ -1,0 +1,112 @@
+ERROR - 2022-07-16 00:58:22 --> Column 'id_dokter' cannot be null
+CRITICAL - 2022-07-16 00:58:22 --> Column 'id_dokter' cannot be null
+#0 C:\xampp\htdocs\klinik-muhammadiyah\system\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `so...', 0)
+#1 C:\xampp\htdocs\klinik-muhammadiyah\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `so...')
+#2 C:\xampp\htdocs\klinik-muhammadiyah\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `so...')
+#3 C:\xampp\htdocs\klinik-muhammadiyah\system\Database\BaseBuilder.php(1771): CodeIgniter\Database\BaseConnection->query('INSERT INTO `so...', Array, false)
+#4 C:\xampp\htdocs\klinik-muhammadiyah\app\Models\M_sosmed.php(24): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\xampp\htdocs\klinik-muhammadiyah\app\Controllers\Sosmed.php(39): App\Models\M_sosmed->simpan(Array)
+#6 C:\xampp\htdocs\klinik-muhammadiyah\system\CodeIgniter.php(832): App\Controllers\Sosmed->tsosmedAksi()
+#7 C:\xampp\htdocs\klinik-muhammadiyah\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Sosmed))
+#8 C:\xampp\htdocs\klinik-muhammadiyah\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\klinik-muhammadiyah\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\klinik-muhammadiyah\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2022-07-16 20:46:53 --> Trying to get property 'nm_dokter' of non-object
+#0 C:\xampp\htdocs\klinik-muhammadiyah\app\Views\chat\v_chat.php(10): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get p...', 'C:\\xampp\\htdocs...', 10, Array)
+#1 C:\xampp\htdocs\klinik-muhammadiyah\system\View\View.php(210): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\klinik-muhammadiyah\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp\htdocs\klinik-muhammadiyah\system\Common.php(1089): CodeIgniter\View\View->render('chat/v_chat', Array, true)
+#4 C:\xampp\htdocs\klinik-muhammadiyah\app\Controllers\Chat.php(31): view('chat/v_chat', Array)
+#5 C:\xampp\htdocs\klinik-muhammadiyah\system\CodeIgniter.php(832): App\Controllers\Chat->chat('1')
+#6 C:\xampp\htdocs\klinik-muhammadiyah\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Chat))
+#7 C:\xampp\htdocs\klinik-muhammadiyah\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\klinik-muhammadiyah\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\klinik-muhammadiyah\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2022-07-16 20:47:00 --> Trying to get property 'nm_dokter' of non-object
+#0 C:\xampp\htdocs\klinik-muhammadiyah\app\Views\chat\v_chat.php(10): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get p...', 'C:\\xampp\\htdocs...', 10, Array)
+#1 C:\xampp\htdocs\klinik-muhammadiyah\system\View\View.php(210): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\klinik-muhammadiyah\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp\htdocs\klinik-muhammadiyah\system\Common.php(1089): CodeIgniter\View\View->render('chat/v_chat', Array, true)
+#4 C:\xampp\htdocs\klinik-muhammadiyah\app\Controllers\Chat.php(31): view('chat/v_chat', Array)
+#5 C:\xampp\htdocs\klinik-muhammadiyah\system\CodeIgniter.php(832): App\Controllers\Chat->chat('1')
+#6 C:\xampp\htdocs\klinik-muhammadiyah\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Chat))
+#7 C:\xampp\htdocs\klinik-muhammadiyah\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\klinik-muhammadiyah\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\klinik-muhammadiyah\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2022-07-16 20:47:47 --> Trying to get property 'nm_dokter' of non-object
+#0 C:\xampp\htdocs\klinik-muhammadiyah\app\Views\chat\v_chat.php(10): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get p...', 'C:\\xampp\\htdocs...', 10, Array)
+#1 C:\xampp\htdocs\klinik-muhammadiyah\system\View\View.php(210): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\klinik-muhammadiyah\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp\htdocs\klinik-muhammadiyah\system\Common.php(1089): CodeIgniter\View\View->render('chat/v_chat', Array, true)
+#4 C:\xampp\htdocs\klinik-muhammadiyah\app\Controllers\Chat.php(31): view('chat/v_chat', Array)
+#5 C:\xampp\htdocs\klinik-muhammadiyah\system\CodeIgniter.php(832): App\Controllers\Chat->chat('1')
+#6 C:\xampp\htdocs\klinik-muhammadiyah\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Chat))
+#7 C:\xampp\htdocs\klinik-muhammadiyah\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\klinik-muhammadiyah\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\klinik-muhammadiyah\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2022-07-16 22:13:45 --> Trying to get property 'nm_dokter' of non-object
+#0 C:\xampp\htdocs\klinik-muhammadiyah\app\Views\chat\v_chat.php(10): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get p...', 'C:\\xampp\\htdocs...', 10, Array)
+#1 C:\xampp\htdocs\klinik-muhammadiyah\system\View\View.php(210): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\klinik-muhammadiyah\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp\htdocs\klinik-muhammadiyah\system\Common.php(1089): CodeIgniter\View\View->render('chat/v_chat', Array, true)
+#4 C:\xampp\htdocs\klinik-muhammadiyah\app\Controllers\Chat.php(31): view('chat/v_chat', Array)
+#5 C:\xampp\htdocs\klinik-muhammadiyah\system\CodeIgniter.php(832): App\Controllers\Chat->chat('1')
+#6 C:\xampp\htdocs\klinik-muhammadiyah\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Chat))
+#7 C:\xampp\htdocs\klinik-muhammadiyah\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\klinik-muhammadiyah\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\klinik-muhammadiyah\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2022-07-16 23:38:59 --> Trying to get property 'nm_dokter' of non-object
+#0 C:\xampp\htdocs\klinik-muhammadiyah\app\Views\chat\v_chat.php(10): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get p...', 'C:\\xampp\\htdocs...', 10, Array)
+#1 C:\xampp\htdocs\klinik-muhammadiyah\system\View\View.php(210): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\klinik-muhammadiyah\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp\htdocs\klinik-muhammadiyah\system\Common.php(1089): CodeIgniter\View\View->render('chat/v_chat', Array, true)
+#4 C:\xampp\htdocs\klinik-muhammadiyah\app\Controllers\Chat.php(31): view('chat/v_chat', Array)
+#5 C:\xampp\htdocs\klinik-muhammadiyah\system\CodeIgniter.php(832): App\Controllers\Chat->chat('1')
+#6 C:\xampp\htdocs\klinik-muhammadiyah\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Chat))
+#7 C:\xampp\htdocs\klinik-muhammadiyah\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\klinik-muhammadiyah\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\klinik-muhammadiyah\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2022-07-16 23:48:36 --> syntax error, unexpected '<'
+#0 C:\xampp\htdocs\klinik-muhammadiyah\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#1 C:\xampp\htdocs\klinik-muhammadiyah\system\Common.php(1089): CodeIgniter\View\View->render('chat/v_chat', Array, true)
+#2 C:\xampp\htdocs\klinik-muhammadiyah\app\Controllers\Chat.php(31): view('chat/v_chat', Array)
+#3 C:\xampp\htdocs\klinik-muhammadiyah\system\CodeIgniter.php(832): App\Controllers\Chat->chat('10')
+#4 C:\xampp\htdocs\klinik-muhammadiyah\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Chat))
+#5 C:\xampp\htdocs\klinik-muhammadiyah\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\klinik-muhammadiyah\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 C:\xampp\htdocs\klinik-muhammadiyah\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#8 {main}
+ERROR - 2022-07-16 23:49:56 --> Column 'id_dokter' cannot be null
+CRITICAL - 2022-07-16 23:49:56 --> Column 'id_dokter' cannot be null
+#0 C:\xampp\htdocs\klinik-muhammadiyah\system\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `ch...', 0)
+#1 C:\xampp\htdocs\klinik-muhammadiyah\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `ch...')
+#2 C:\xampp\htdocs\klinik-muhammadiyah\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `ch...')
+#3 C:\xampp\htdocs\klinik-muhammadiyah\system\Database\BaseBuilder.php(1771): CodeIgniter\Database\BaseConnection->query('INSERT INTO `ch...', Array, false)
+#4 C:\xampp\htdocs\klinik-muhammadiyah\app\Models\M_chat.php(21): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\xampp\htdocs\klinik-muhammadiyah\app\Controllers\Chat.php(39): App\Models\M_chat->simpan(Array)
+#6 C:\xampp\htdocs\klinik-muhammadiyah\system\CodeIgniter.php(832): App\Controllers\Chat->chatAksiPsn()
+#7 C:\xampp\htdocs\klinik-muhammadiyah\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Chat))
+#8 C:\xampp\htdocs\klinik-muhammadiyah\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\klinik-muhammadiyah\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\klinik-muhammadiyah\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+ERROR - 2022-07-16 23:55:14 --> Column 'id_user' cannot be null
+CRITICAL - 2022-07-16 23:55:14 --> Column 'id_user' cannot be null
+#0 C:\xampp\htdocs\klinik-muhammadiyah\system\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `ch...', 0)
+#1 C:\xampp\htdocs\klinik-muhammadiyah\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `ch...')
+#2 C:\xampp\htdocs\klinik-muhammadiyah\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `ch...')
+#3 C:\xampp\htdocs\klinik-muhammadiyah\system\Database\BaseBuilder.php(1771): CodeIgniter\Database\BaseConnection->query('INSERT INTO `ch...', Array, false)
+#4 C:\xampp\htdocs\klinik-muhammadiyah\app\Models\M_chat.php(21): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\xampp\htdocs\klinik-muhammadiyah\app\Controllers\Chat.php(40): App\Models\M_chat->simpan(Array)
+#6 C:\xampp\htdocs\klinik-muhammadiyah\system\CodeIgniter.php(832): App\Controllers\Chat->chatAksiPsn()
+#7 C:\xampp\htdocs\klinik-muhammadiyah\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Chat))
+#8 C:\xampp\htdocs\klinik-muhammadiyah\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\klinik-muhammadiyah\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\klinik-muhammadiyah\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#11 {main}

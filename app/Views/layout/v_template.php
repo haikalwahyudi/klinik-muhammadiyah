@@ -32,6 +32,9 @@
   <link rel="stylesheet" href="<?= base_url() ?>/template/plugins/datatables-responsive/css/responsive.bootstrap4.min.css">
   <link rel="stylesheet" href="<?= base_url() ?>/template/plugins/datatables-buttons/css/buttons.bootstrap4.min.css">
   <link rel="stylesheet" href="<?= base_url() ?>/template/datatables/datatables.min.css">
+
+  <!-- <link rel="stylesheet" type="text/css" href="<?= base_url(); ?>/rating/demo.css" /> -->
+  <!-- <link rel="stylesheet" type="text/css" href="<?= base_url(); ?>/rating/style.css" /> -->
 </head>
 
 <body class="hold-transition sidebar-mini layout-fixed">

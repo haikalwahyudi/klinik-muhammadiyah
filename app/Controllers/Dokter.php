@@ -5,17 +5,20 @@ namespace App\Controllers;
 use App\Models\M_dokter;
 use App\Models\M_poli;
 use App\Models\M_jadwal;
+use App\Models\M_user;
 
 class Dokter extends BaseController
 {
     protected $M_dokter;
     protected $M_poli;
+    protected $M_user;
     protected $M_jadwal;
 
     public function __construct()
     {
         $this->M_dokter = new M_dokter();
         $this->M_poli = new M_poli();
+        $this->M_user = new M_user();
         $this->M_jadwal = new M_jadwal();
     }
     public function ddokter()
@@ -58,6 +61,20 @@ class Dokter extends BaseController
             'id_jadwal'       => $this->request->getVar('id_jadwal'),
             'foto'            => $namagambar,
             'alamat'          => $this->request->getVar('alamat'),
+        ]);
+        //mengambil id terakhir
+        $id_Dokter = $this->M_dokter->insertID();
+        // dd($id_Dokter);
+
+        $this->M_user->simpan([
+            'nm_user'   => $this->request->getVar('nm_dokter'),
+            'email'     => $this->request->getVar('email'),
+            'nohp'      => $this->request->getVar('nohp'),
+            'username'  => '',
+            'password'  => '1234',
+            'level'     => 'Dokter',
+            'foto'      => 'default.png',
+            'id_dokter' => $id_Dokter,
         ]);
         session()->setFlashdata('simpan', 'Data berhasil disimpan');
         return redirect()->to('/Dokter/ddokter');

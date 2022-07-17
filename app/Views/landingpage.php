@@ -57,7 +57,7 @@
         </div>
       </div> -->
       <!-- <a href="#poli">Poli</a> -->
-      <a href="#review">review</a>
+      <a href="<?= base_url(); ?>/Review">review</a>
 
       <?php if (session()->get('log_in') == true) { ?>
         <span class="login"> <a href="<?= base_url(); ?>/login/logout"> Logout</a></span>
