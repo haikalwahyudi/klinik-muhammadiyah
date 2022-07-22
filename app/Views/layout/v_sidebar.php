@@ -182,6 +182,14 @@
             </a>
           </li>
           <li class="nav-item">
+            <a href="<?= base_url(); ?>/Antrian" class="nav-link">
+              <i class="nav-icon fa fa-print text-light"></i>
+              <p class="text-light">
+                Cetak No Antrian
+              </p>
+            </a>
+          </li>
+          <li class="nav-item">
             <a href="<?= base_url(); ?>/Home" class="nav-link">
               <i class="nav-icon fa fa-user text-light"></i>
               <p class="text-light">

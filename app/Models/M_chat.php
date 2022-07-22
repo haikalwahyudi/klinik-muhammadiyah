@@ -22,7 +22,11 @@ class M_chat extends Model
     }
     public function dataKosultasi()
     {
-        return $this->db->table($this->table)
-            ->where(['id_dokter' => session()->get('id_dokter')]);
+        // $this->select('chat.*');
+        // $this->where(['id_user' => session()->get('id')]);
+        // return $this->get()->getResultArray();
+        $id = session()->get('id');
+        $data = $this->db->query("select distinct id_user from chat where tujuan='$id'");
+        return $data->getResultArray();
     }
 }

@@ -26,27 +26,33 @@
             <?php
             if ($data != null) {
                 $db = \Config\Database::connect();
-                $id = $data->id_user;
-                $dt = $db->query("SELECT * FROM user WHERE id_user = '$id'")->getResult();
+                // $id = $data->id_user;
+                // $dt = $db->query("SELECT * FROM user WHERE id_user = '$id'")->getResult();
                 // dd($dt);
             ?>
                 <div class="row">
-                    <div class="col-md-4">
-                        <div class="card card-success card-outline">
-                            <div class="card-body box-profile">
-                                <div class="text-center">
-                                    <img class="profile-user-img img-fluid img-circle" src="<?= base_url(); ?>/img/<?= $dt[0]->foto; ?>" alt="User profile picture">
+                    <?php
+                    foreach ($data as $d) {
+
+                        $dt = $db->query("SELECT * FROM user WHERE id_user = '$d[id_user]'")->getRowArray();
+                    ?>
+                        <div class="col-md-3">
+                            <div class="card card-success card-outline">
+                                <div class="card-body box-profile">
+                                    <div class="text-center">
+                                        <img class="profile-user-img img-fluid img-circle" src="<?= base_url(); ?>/img/<?= ($dt) ? $dt['foto'] : ""; ?>" alt="User profile picture">
+                                    </div>
+
+                                    <h3 class="profile-username text-center"><?= ($dt) ? $dt['nm_user'] : ""; ?></h3>
+
+                                    <!-- <p class="text-muted text-center">Software Engineer</p> -->
+
+                                    <a href="<?= base_url() ?>/Chat/chatDokter/<?= $d['id_user'] ?>" class="btn btn-success btn-block"><b>Buka</b></a>
                                 </div>
-
-                                <h3 class="profile-username text-center"><?= $dt[0]->nm_user ?></h3>
-
-                                <!-- <p class="text-muted text-center">Software Engineer</p> -->
-
-                                <a href="<?= base_url() ?>/Chat/chatDokter/<?= $data->id_user; ?>" class="btn btn-success btn-block"><b>Buka</b></a>
+                                <!-- /.card-body -->
                             </div>
-                            <!-- /.card-body -->
                         </div>
-                    </div>
+                    <?php } ?>
                 </div>
             <?php } else { ?>
                 <div class="row">

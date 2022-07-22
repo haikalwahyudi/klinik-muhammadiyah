@@ -41,15 +41,18 @@ class Chat extends BaseController
             'duser'     => $this->M_user->ambilData($id)->getRow(),
             'chat'      => $this->M_chat->ambilData()
         ];
+
+        // dd($data);
         return view('chat/v_chatdokter', $data);
     }
     public function chatAksiPsn()
     {
         // dd($this->request->getVar('id_dokter'));
         $this->M_chat->simpan([
-            'id_dokter'     => $this->request->getVar('id_dokter'),
+            'tujuan'     => $this->request->getVar('id_dokter'),
             'id_user'       => session()->get('id'),
             'aksi'          => '2',
+            'urutan'          => time(),
             'pesan'         => $this->request->getVar('pesan')
         ]);
         return redirect()->to('Chat/chat/' . $this->request->getVar('id_dokter'));
@@ -58,9 +61,10 @@ class Chat extends BaseController
     {
         // dd($this->request->getVar('id_dokter'));
         $this->M_chat->simpan([
-            'id_dokter'     => session()->get('id_dokter'),
-            'id_user'       => $this->request->getVar('id_pasien'),
+            'tujuan'     => $this->request->getVar('id_pasien'),
+            'id_user'       => session()->get('id'),
             'aksi'          => '1',
+            'urutan'          => time(),
             'pesan'         => $this->request->getVar('pesan')
         ]);
         return redirect()->to('Chat/chatDokter/' . $this->request->getVar('id_pasien'));

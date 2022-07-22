@@ -19,12 +19,11 @@ class Konsultasi extends BaseController
         // ];
         $dt = $this->M_chat->dataKosultasi();
         $dy = 0;
-        foreach ($dt as $c) {
-            $dy++;
-        }
-        if ($dy > 1) {
-            $data['data'] = $this->M_chat->dataKosultasi()->get()->getRow();
-        }
+        //dd($dt);
+        $data['data'] = $dt;
+        // if ($dy > 1) {
+        //     $data['data'] = $this->M_chat->dataKosultasi()->get()->getRow();
+        // }
         return view('/chat/v_dkonsultasidokter', $data);
     }
 }

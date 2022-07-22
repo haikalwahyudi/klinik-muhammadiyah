@@ -1,0 +1,123 @@
+ERROR - 2022-07-21 10:53:44 --> Unknown column 'id_dokter' in 'where clause'
+CRITICAL - 2022-07-21 10:53:44 --> Unknown column 'id_dokter' in 'where clause'
+#0 C:\xampp\htdocs\klinik-muhammadiyah\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT * FROM c...', 0)
+#1 C:\xampp\htdocs\klinik-muhammadiyah\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * FROM c...')
+#2 C:\xampp\htdocs\klinik-muhammadiyah\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM c...')
+#3 C:\xampp\htdocs\klinik-muhammadiyah\app\Views\chat\v_chat.php(52): CodeIgniter\Database\BaseConnection->query('SELECT * FROM c...')
+#4 C:\xampp\htdocs\klinik-muhammadiyah\system\View\View.php(210): include('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\klinik-muhammadiyah\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#6 C:\xampp\htdocs\klinik-muhammadiyah\system\Common.php(1089): CodeIgniter\View\View->render('chat/v_chat', Array, true)
+#7 C:\xampp\htdocs\klinik-muhammadiyah\app\Controllers\Chat.php(35): view('chat/v_chat', Array)
+#8 C:\xampp\htdocs\klinik-muhammadiyah\system\CodeIgniter.php(832): App\Controllers\Chat->chat('13')
+#9 C:\xampp\htdocs\klinik-muhammadiyah\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Chat))
+#10 C:\xampp\htdocs\klinik-muhammadiyah\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\klinik-muhammadiyah\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\klinik-muhammadiyah\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+CRITICAL - 2022-07-21 11:00:32 --> Call to undefined method CodeIgniter\View\View::select()
+#0 C:\xampp\htdocs\klinik-muhammadiyah\system\View\View.php(210): include()
+#1 C:\xampp\htdocs\klinik-muhammadiyah\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#2 C:\xampp\htdocs\klinik-muhammadiyah\system\Common.php(1089): CodeIgniter\View\View->render('chat/v_chat', Array, true)
+#3 C:\xampp\htdocs\klinik-muhammadiyah\app\Controllers\Chat.php(35): view('chat/v_chat', Array)
+#4 C:\xampp\htdocs\klinik-muhammadiyah\system\CodeIgniter.php(832): App\Controllers\Chat->chat('13')
+#5 C:\xampp\htdocs\klinik-muhammadiyah\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Chat))
+#6 C:\xampp\htdocs\klinik-muhammadiyah\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\klinik-muhammadiyah\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp\htdocs\klinik-muhammadiyah\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#9 {main}
+ERROR - 2022-07-21 20:16:16 --> Unknown column 'chat.iduser' in 'where clause'
+CRITICAL - 2022-07-21 20:16:16 --> Unknown column 'chat.iduser' in 'where clause'
+#0 C:\xampp\htdocs\klinik-muhammadiyah\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT * FROM c...', 0)
+#1 C:\xampp\htdocs\klinik-muhammadiyah\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * FROM c...')
+#2 C:\xampp\htdocs\klinik-muhammadiyah\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM c...')
+#3 C:\xampp\htdocs\klinik-muhammadiyah\app\Views\chat\v_chat.php(53): CodeIgniter\Database\BaseConnection->query('SELECT * FROM c...')
+#4 C:\xampp\htdocs\klinik-muhammadiyah\system\View\View.php(210): include('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\klinik-muhammadiyah\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#6 C:\xampp\htdocs\klinik-muhammadiyah\system\Common.php(1089): CodeIgniter\View\View->render('chat/v_chat', Array, true)
+#7 C:\xampp\htdocs\klinik-muhammadiyah\app\Controllers\Chat.php(35): view('chat/v_chat', Array)
+#8 C:\xampp\htdocs\klinik-muhammadiyah\system\CodeIgniter.php(832): App\Controllers\Chat->chat('13')
+#9 C:\xampp\htdocs\klinik-muhammadiyah\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Chat))
+#10 C:\xampp\htdocs\klinik-muhammadiyah\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\klinik-muhammadiyah\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\klinik-muhammadiyah\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+CRITICAL - 2022-07-21 20:16:33 --> Undefined index: nm_user
+#0 C:\xampp\htdocs\klinik-muhammadiyah\app\Views\chat\v_chat.php(59): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\xampp\\htdocs...', 59, Array)
+#1 C:\xampp\htdocs\klinik-muhammadiyah\system\View\View.php(210): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\klinik-muhammadiyah\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp\htdocs\klinik-muhammadiyah\system\Common.php(1089): CodeIgniter\View\View->render('chat/v_chat', Array, true)
+#4 C:\xampp\htdocs\klinik-muhammadiyah\app\Controllers\Chat.php(35): view('chat/v_chat', Array)
+#5 C:\xampp\htdocs\klinik-muhammadiyah\system\CodeIgniter.php(832): App\Controllers\Chat->chat('13')
+#6 C:\xampp\htdocs\klinik-muhammadiyah\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Chat))
+#7 C:\xampp\htdocs\klinik-muhammadiyah\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\klinik-muhammadiyah\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\klinik-muhammadiyah\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#10 {main}
+ERROR - 2022-07-21 20:55:07 --> Unknown column 'id_dokter' in 'where clause'
+CRITICAL - 2022-07-21 20:55:07 --> Unknown column 'id_dokter' in 'where clause'
+#0 C:\xampp\htdocs\klinik-muhammadiyah\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT * FROM c...', 0)
+#1 C:\xampp\htdocs\klinik-muhammadiyah\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * FROM c...')
+#2 C:\xampp\htdocs\klinik-muhammadiyah\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM c...')
+#3 C:\xampp\htdocs\klinik-muhammadiyah\app\Views\chat\v_chat.php(52): CodeIgniter\Database\BaseConnection->query('SELECT * FROM c...')
+#4 C:\xampp\htdocs\klinik-muhammadiyah\system\View\View.php(210): include('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\klinik-muhammadiyah\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#6 C:\xampp\htdocs\klinik-muhammadiyah\system\Common.php(1089): CodeIgniter\View\View->render('chat/v_chat', Array, true)
+#7 C:\xampp\htdocs\klinik-muhammadiyah\app\Controllers\Chat.php(35): view('chat/v_chat', Array)
+#8 C:\xampp\htdocs\klinik-muhammadiyah\system\CodeIgniter.php(832): App\Controllers\Chat->chat('13')
+#9 C:\xampp\htdocs\klinik-muhammadiyah\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Chat))
+#10 C:\xampp\htdocs\klinik-muhammadiyah\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\klinik-muhammadiyah\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\klinik-muhammadiyah\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+ERROR - 2022-07-21 21:05:09 --> Column 'id_user' cannot be null
+CRITICAL - 2022-07-21 21:05:09 --> Column 'id_user' cannot be null
+#0 C:\xampp\htdocs\klinik-muhammadiyah\system\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `ch...', 0)
+#1 C:\xampp\htdocs\klinik-muhammadiyah\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `ch...')
+#2 C:\xampp\htdocs\klinik-muhammadiyah\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `ch...')
+#3 C:\xampp\htdocs\klinik-muhammadiyah\system\Database\BaseBuilder.php(1771): CodeIgniter\Database\BaseConnection->query('INSERT INTO `ch...', Array, false)
+#4 C:\xampp\htdocs\klinik-muhammadiyah\app\Models\M_chat.php(21): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\xampp\htdocs\klinik-muhammadiyah\app\Controllers\Chat.php(54): App\Models\M_chat->simpan(Array)
+#6 C:\xampp\htdocs\klinik-muhammadiyah\system\CodeIgniter.php(832): App\Controllers\Chat->chatAksiPsn()
+#7 C:\xampp\htdocs\klinik-muhammadiyah\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Chat))
+#8 C:\xampp\htdocs\klinik-muhammadiyah\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\klinik-muhammadiyah\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\klinik-muhammadiyah\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2022-07-21 22:19:39 --> Undefined variable: id_user
+#0 C:\xampp\htdocs\klinik-muhammadiyah\app\Views\chat\v_chat.php(56): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 56, Array)
+#1 C:\xampp\htdocs\klinik-muhammadiyah\system\View\View.php(210): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\klinik-muhammadiyah\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp\htdocs\klinik-muhammadiyah\system\Common.php(1089): CodeIgniter\View\View->render('chat/v_chat', Array, true)
+#4 C:\xampp\htdocs\klinik-muhammadiyah\app\Controllers\Chat.php(35): view('chat/v_chat', Array)
+#5 C:\xampp\htdocs\klinik-muhammadiyah\system\CodeIgniter.php(832): App\Controllers\Chat->chat('13')
+#6 C:\xampp\htdocs\klinik-muhammadiyah\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Chat))
+#7 C:\xampp\htdocs\klinik-muhammadiyah\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\klinik-muhammadiyah\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\klinik-muhammadiyah\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#10 {main}
+ERROR - 2022-07-21 22:27:06 --> Unknown column 'id_dokter' in 'where clause'
+CRITICAL - 2022-07-21 22:27:06 --> Unknown column 'id_dokter' in 'where clause'
+#0 C:\xampp\htdocs\klinik-muhammadiyah\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\klinik-muhammadiyah\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\klinik-muhammadiyah\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\klinik-muhammadiyah\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\klinik-muhammadiyah\app\Controllers\Konsultasi.php(26): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\klinik-muhammadiyah\system\CodeIgniter.php(832): App\Controllers\Konsultasi->index()
+#6 C:\xampp\htdocs\klinik-muhammadiyah\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Konsultasi))
+#7 C:\xampp\htdocs\klinik-muhammadiyah\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\klinik-muhammadiyah\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\klinik-muhammadiyah\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#10 {main}
+ERROR - 2022-07-21 22:27:21 --> Unknown column 'id_dokter' in 'where clause'
+CRITICAL - 2022-07-21 22:27:21 --> Unknown column 'id_dokter' in 'where clause'
+#0 C:\xampp\htdocs\klinik-muhammadiyah\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\klinik-muhammadiyah\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\klinik-muhammadiyah\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\klinik-muhammadiyah\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\klinik-muhammadiyah\app\Controllers\Konsultasi.php(26): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\klinik-muhammadiyah\system\CodeIgniter.php(832): App\Controllers\Konsultasi->index()
+#6 C:\xampp\htdocs\klinik-muhammadiyah\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Konsultasi))
+#7 C:\xampp\htdocs\klinik-muhammadiyah\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\klinik-muhammadiyah\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\klinik-muhammadiyah\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#10 {main}

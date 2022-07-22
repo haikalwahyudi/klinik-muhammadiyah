@@ -1,0 +1,75 @@
+CRITICAL - 2022-07-18 08:54:36 --> Undefined variable: poli
+#0 C:\xampp\htdocs\klinik-muhammadiyah\app\Views\daftar\v_daftarpoli.php(43): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 43, Array)
+#1 C:\xampp\htdocs\klinik-muhammadiyah\system\View\View.php(210): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\klinik-muhammadiyah\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp\htdocs\klinik-muhammadiyah\system\Common.php(1089): CodeIgniter\View\View->render('/daftar/v_dafta...', Array, true)
+#4 C:\xampp\htdocs\klinik-muhammadiyah\app\Controllers\Daftar.php(35): view('/daftar/v_dafta...')
+#5 C:\xampp\htdocs\klinik-muhammadiyah\system\CodeIgniter.php(832): App\Controllers\Daftar->dpoli()
+#6 C:\xampp\htdocs\klinik-muhammadiyah\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Daftar))
+#7 C:\xampp\htdocs\klinik-muhammadiyah\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\klinik-muhammadiyah\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\klinik-muhammadiyah\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2022-07-18 09:17:01 --> syntax error, unexpected '}', expecting identifier (T_STRING) or variable (T_VARIABLE) or '{' or '$'
+#0 C:\xampp\htdocs\klinik-muhammadiyah\system\Router\Router.php(175): CodeIgniter\Router\Router->autoRoute('daftar/dpoli')
+#1 C:\xampp\htdocs\klinik-muhammadiyah\system\CodeIgniter.php(726): CodeIgniter\Router\Router->handle('daftar/dpoli')
+#2 C:\xampp\htdocs\klinik-muhammadiyah\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+#3 C:\xampp\htdocs\klinik-muhammadiyah\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\klinik-muhammadiyah\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\klinik-muhammadiyah\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2022-07-18 09:17:50 --> syntax error, unexpected '}'
+#0 C:\xampp\htdocs\klinik-muhammadiyah\system\Router\Router.php(175): CodeIgniter\Router\Router->autoRoute('daftar/dpoli')
+#1 C:\xampp\htdocs\klinik-muhammadiyah\system\CodeIgniter.php(726): CodeIgniter\Router\Router->handle('daftar/dpoli')
+#2 C:\xampp\htdocs\klinik-muhammadiyah\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+#3 C:\xampp\htdocs\klinik-muhammadiyah\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\klinik-muhammadiyah\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\klinik-muhammadiyah\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2022-07-18 10:32:53 --> Undefined property: stdClass::$kd_poli
+#0 C:\xampp\htdocs\klinik-muhammadiyah\app\Views\daftar\v_daftarpoli.php(67): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined prope...', 'C:\\xampp\\htdocs...', 67, Array)
+#1 C:\xampp\htdocs\klinik-muhammadiyah\system\View\View.php(210): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\klinik-muhammadiyah\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp\htdocs\klinik-muhammadiyah\system\Common.php(1089): CodeIgniter\View\View->render('/daftar/v_dafta...', Array, true)
+#4 C:\xampp\htdocs\klinik-muhammadiyah\app\Controllers\Daftar.php(44): view('/daftar/v_dafta...', Array)
+#5 C:\xampp\htdocs\klinik-muhammadiyah\system\CodeIgniter.php(832): App\Controllers\Daftar->dpoli()
+#6 C:\xampp\htdocs\klinik-muhammadiyah\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Daftar))
+#7 C:\xampp\htdocs\klinik-muhammadiyah\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\klinik-muhammadiyah\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\klinik-muhammadiyah\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2022-07-18 10:33:20 --> Cannot use object of type stdClass as array
+#0 C:\xampp\htdocs\klinik-muhammadiyah\system\View\View.php(210): include()
+#1 C:\xampp\htdocs\klinik-muhammadiyah\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#2 C:\xampp\htdocs\klinik-muhammadiyah\system\Common.php(1089): CodeIgniter\View\View->render('/daftar/v_dafta...', Array, true)
+#3 C:\xampp\htdocs\klinik-muhammadiyah\app\Controllers\Daftar.php(44): view('/daftar/v_dafta...', Array)
+#4 C:\xampp\htdocs\klinik-muhammadiyah\system\CodeIgniter.php(832): App\Controllers\Daftar->dpoli()
+#5 C:\xampp\htdocs\klinik-muhammadiyah\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Daftar))
+#6 C:\xampp\htdocs\klinik-muhammadiyah\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\klinik-muhammadiyah\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp\htdocs\klinik-muhammadiyah\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#9 {main}
+CRITICAL - 2022-07-18 10:33:53 --> Undefined property: stdClass::$kd_poli
+#0 C:\xampp\htdocs\klinik-muhammadiyah\app\Views\daftar\v_daftarpoli.php(67): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined prope...', 'C:\\xampp\\htdocs...', 67, Array)
+#1 C:\xampp\htdocs\klinik-muhammadiyah\system\View\View.php(210): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\klinik-muhammadiyah\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp\htdocs\klinik-muhammadiyah\system\Common.php(1089): CodeIgniter\View\View->render('/daftar/v_dafta...', Array, true)
+#4 C:\xampp\htdocs\klinik-muhammadiyah\app\Controllers\Daftar.php(44): view('/daftar/v_dafta...', Array)
+#5 C:\xampp\htdocs\klinik-muhammadiyah\system\CodeIgniter.php(832): App\Controllers\Daftar->dpoli()
+#6 C:\xampp\htdocs\klinik-muhammadiyah\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Daftar))
+#7 C:\xampp\htdocs\klinik-muhammadiyah\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\klinik-muhammadiyah\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\klinik-muhammadiyah\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#10 {main}
+ERROR - 2022-07-18 10:38:14 --> Unknown column 'kd_poli' in 'where clause'
+CRITICAL - 2022-07-18 10:38:14 --> Unknown column 'kd_poli' in 'where clause'
+#0 C:\xampp\htdocs\klinik-muhammadiyah\system\Database\MySQLi\Connection.php(292): mysqli->query('select max(no_a...', 0)
+#1 C:\xampp\htdocs\klinik-muhammadiyah\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('select max(no_a...')
+#2 C:\xampp\htdocs\klinik-muhammadiyah\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('select max(no_a...')
+#3 C:\xampp\htdocs\klinik-muhammadiyah\app\Controllers\Daftar.php(53): CodeIgniter\Database\BaseConnection->query('select max(no_a...')
+#4 C:\xampp\htdocs\klinik-muhammadiyah\system\CodeIgniter.php(832): App\Controllers\Daftar->daftarPoliAksi()
+#5 C:\xampp\htdocs\klinik-muhammadiyah\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Daftar))
+#6 C:\xampp\htdocs\klinik-muhammadiyah\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\klinik-muhammadiyah\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp\htdocs\klinik-muhammadiyah\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#9 {main}

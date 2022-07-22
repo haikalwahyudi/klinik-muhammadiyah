@@ -35,7 +35,9 @@
     <img src="<?= base_url(); ?>/landingpage/image/LOGO WEB.png" width="200px" alt="" />
 
     <nav class="navbar">
-      <a href="#home">Beranda</a>
+      <?php if (session()->get('log_in') == true) { ?>
+        <a href="<?php base_url(); ?>/Admin">Dashboard</a>
+      <?php } ?>
       <!-- <div class="dropdown">
         <span>Profil</span>
         <div class="dropdown-content">
@@ -44,10 +46,11 @@
           <a href="#services">Fasilitas</a>
         </div>
       </div> -->
-      <a href="#doctors">Jadwal Dokter</a>
+      <!-- <a href="#doctors">Jadwal Dokter</a> -->
       <a href="<?= base_url(); ?>/Chat">Konsultasi</a>
+      <!-- <a href="<?= base_url(); ?>/Daftar">No Antrian</a> -->
       <!-- <a href="#doctors">Konsultasi</a> -->
-      <a href="<?= base_url() ?>/daftar">Daftar</a>
+      <a href="<?= base_url() ?>/daftar/dpoli">Daftar</a>
       <!-- <div class="dropdown">
         <span>Layanan</span>
         <div class="dropdown-content">
@@ -57,7 +60,9 @@
         </div>
       </div> -->
       <!-- <a href="#poli">Poli</a> -->
-      <a href="<?= base_url(); ?>/Review">review</a>
+      <?php if (session()->get('level') == 'Pasien') { ?>
+        <a href="<?= base_url(); ?>/Review">review</a>
+      <?php } ?>
 
       <?php if (session()->get('log_in') == true) { ?>
         <span class="login"> <a href="<?= base_url(); ?>/login/logout"> Logout</a></span>

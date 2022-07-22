@@ -43,76 +43,36 @@
                         <div class="card-body">
                             <!-- Conversations are loaded here -->
                             <div class="direct-chat-messages">
-
                                 <?php
-                                // dd($duser);
-                                // foreach ($chat as $cht) {
-                                // dd($cht);
-                                // if ($data->id_dokter == $cht['id_dokter'] && $cht['aksi'] = '1') {
                                 $db = \Config\Database::connect();
                                 $id = $duser->id_user;
-                                $id_dokter = session()->get('id_dokter');
-                                $chat1 = $db->query("SELECT * FROM chat WHERE id_user = '$id' and aksi = '2' and id_dokter = '$id_dokter'")->getResultArray();
-                                // dd($chat1);
-                                foreach ($chat1 as $cht1) {
-                                ?>
-                                    <!-- Message. Default to the left -->
-                                    <div class="direct-chat-msg">
-                                        <div class="direct-chat-infos clearfix">
-                                            <span class="direct-chat-name float-left"><?= $duser->nm_user; ?></span>
-                                            <!-- <span class="direct-chat-timestamp float-right">23 Jan 2:00 pm</span> -->
-                                        </div>
-                                        <!-- /.direct-chat-infos -->
-                                        <img class="direct-chat-img" src="<?= base_url(); ?>/template/dist/img/user1-128x128.jpg" alt="message user image">
-                                        <!-- /.direct-chat-img -->
-                                        <div class="direct-chat-text">
-                                            <?= $cht1['pesan']; ?>
-                                        </div>
-                                        <!-- /.direct-chat-text -->
-                                    </div>
-                                    <!-- /.direct-chat-msg -->
-                                <?php
-                                }
-
-                                // } 
-                                ?>
-
-                                <?php
-                                // foreach ($chat as $cht) {
-                                //     if ($cht['id_user'] = session()->get('id') && $chat['aksi'] = '2') {
-                                //         dd($chat);
-                                $db = \Config\Database::connect();
-                                $id = session()->get('id_dokter');
-                                $chat2 = $db->query("SELECT * FROM chat WHERE id_dokter = '$id' and aksi = '1'")->getResultArray();
+                                $idUser = session()->get('id');
+                                // $chat = $db->query("SELECT * FROM chat WHERE id_dokter = '$id' and tujuan = '$idUser'")->getResultArray();
+                                $chat = $db->query("SELECT * FROM chat, user where chat.id_user=user.id_user ORDER BY urutan DESC")->getResultArray();
                                 // dd($chat);
-
-                                foreach ($chat2 as $cht2) {
+                                foreach ($chat as $cht) {
+                                    if (($cht['id_user'] == $id and $cht['tujuan'] == $idUser) || ($cht['id_user'] == $idUser and $cht['tujuan'] == $id)) {
                                 ?>
-                                    <!-- Message to the right -->
-                                    <div class="direct-chat-msg right">
-                                        <div class="direct-chat-infos clearfix">
-                                            <span class="direct-chat-name float-right"><?= session()->get('nama'); ?></span>
-                                            <!-- <span class="direct-chat-timestamp float-left">23 Jan 2:05 pm</span> -->
+                                        <div class="direct-chat-msg <?= ($cht['aksi'] == 2) ? '' : 'right' ?>">
+                                            <div class="direct-chat-info clearfix">
+                                                <span class="direct-chat-name <?= ($cht['aksi'] == 2) ? 'float-left' : 'float-right' ?>"><?= $cht['nm_user']; ?></span>
+                                                <!-- <span class="direct-chat-timestamp float-right">23 Jan 2:00 pm</span> -->
+                                            </div>
+                                            <img class="direct-chat-img" src="<?= base_url(); ?>/img/<?= $cht['foto'] ?>" alt="message user image">
+                                            <div class="direct-chat-text <?= ($cht['aksi'] == 2) ? '' : 'bg-teal' ?> <?= ($cht['aksi'] == 2) ? 'float-left' : 'float-right' ?>">
+                                                <?= $cht['pesan']; ?>
+                                            </div>
                                         </div>
-                                        <!-- /.direct-chat-infos -->
-                                        <img class="direct-chat-img" src="<?= base_url(); ?>/template/dist/img/user3-128x128.jpg" alt="message user image">
-                                        <!-- /.direct-chat-img -->
-                                        <div class="direct-chat-text">
-                                            <?= $cht2['pesan']; ?>
-                                        </div>
-                                        <!-- /.direct-chat-text -->
-                                    </div>
-                                    <!-- /.direct-chat-msg -->
                                 <?php
+                                    }
                                 }
-                                // }
+                                // } 
                                 ?>
                             </div>
                             <!--/.direct-chat-messages-->
                         </div>
                         <!-- /.card-body -->
                         <div class="card-footer">
-
                             <form action="<?= base_url(); ?>/Chat/chatAksiDokter" method="post">
                                 <div class="input-group">
                                     <input type="hidden" name="id_pasien" value="<?= $duser->id_user; ?>">

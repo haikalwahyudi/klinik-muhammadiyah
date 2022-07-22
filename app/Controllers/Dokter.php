@@ -73,7 +73,7 @@ class Dokter extends BaseController
             'username'  => '',
             'password'  => '1234',
             'level'     => 'Dokter',
-            'foto'      => 'default.png',
+            'foto'      => $namagambar,
             'id_dokter' => $id_Dokter,
         ]);
         session()->setFlashdata('simpan', 'Data berhasil disimpan');
