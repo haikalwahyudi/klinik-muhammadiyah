@@ -4,16 +4,16 @@ namespace App\Models;
 
 use CodeIgniter\Model;
 
-class M_berita extends Model
+class M_laporan extends Model
 {
-    protected $table = "berita";
+    protected $table = "pendaftaran";
 
-    public function ambilData($id_berita = false)
+    public function ambilData($id_pendaftaran = false)
     {
-        if ($id_berita === false) {
+        if ($id_pendaftaran === false) {
             return $this->db->table($this->table)->get()->getResult();
         } else {
-            return $this->getWhere(['id_berita' => $id_berita]);
+            return $this->getWhere(['id_pendaftaran' => $id_pendaftaran]);
         }
     }
     public function simpan($data)
@@ -21,15 +21,15 @@ class M_berita extends Model
         $simpan = $this->db->table($this->table);
         return $simpan->insert($data);
     }
-    public function hapus($id_berita)
+    public function hapus($id_pendaftaran)
     {
         $hapus = $this->db->table($this->table);
-        return $hapus->delete(['id_berita' => $id_berita]);
+        return $hapus->delete(['id_pendaftaran' => $id_pendaftaran]);
     }
-    public function ubah($data, $id_berita)
+    public function ubah($data, $id_pendaftaran)
     {
         $ubah = $this->db->table($this->table);
-        $ubah->where(['id_berita' => $id_berita]);
+        $ubah->where(['id_pendaftaran' => $id_pendaftaran]);
         return $ubah->update($data);
     }
 }

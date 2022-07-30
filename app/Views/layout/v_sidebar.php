@@ -5,12 +5,21 @@
     <img src="<?= base_url() ?>/template/dist/img/logo.png" alt="logo" style="width: 220px;">
   </a>
 
+  <!-- Query -->
+  <?php
+  $db = \Config\Database::connect();
+  $id = session()->get('id');
+  $query = $db->query("SELECT * FROM user WHERE id_user='$id'")->getRow();
+  // dd($query);
+  ?>
+  <!-- Query -->
+
   <div class="user-panel pb-3 d-flex bg-white">
     <div class="image">
-      <img src="<?= base_url() ?>/img/<?= session()->get('foto'); ?>" class="img-circle elevation-2 mt-2" alt="User Image" />
+      <img src="<?= base_url() ?>/img/<?= $query->foto ?>" class="img-circle elevation-2 mt-2" alt="User Image" />
     </div>
     <div class="info mt-2 text-bold">
-      <a href="#" class="d-block text-dark"><?= session()->get('nama') ?></a>
+      <a href="#" class="d-block text-dark"><?= $query->nm_user ?> (<?= session()->get('level'); ?>)</a>
     </div>
   </div>
   <!-- Sidebar -->
@@ -31,7 +40,7 @@
               <i class="nav-icon fa fa-home text-light"></i>
               <p class="text-light">
                 Dashboard
-                <span class="right badge badge-danger">New</span>
+                <!-- <span class="right badge badge-danger">New</span> -->
               </p>
             </a>
           </li>
@@ -41,7 +50,6 @@
               <p class="text-light">
                 Data Master
                 <i class="fa fa-angle-left right"></i>
-                <span class="badge badge-danger right">6</span>
               </p>
             </a>
             <ul class="nav nav-treeview">
@@ -59,31 +67,51 @@
               </li>
             </ul>
           </li>
-          <li class="nav-header text-light">EXAMPLES</li>
+          <!-- <li class="nav-header text-light">EXAMPLES</li> -->
           <li class="nav-item">
-            <a href="<?= base_url(); ?>/Poli/dpoli" class="nav-link">
-              <i class="nav-icon fa fa-stethoscope text-light"></i>
+            <a href="#" class="nav-link">
+              <i class="nav-icon fa fa-folder text-light"></i>
               <p class="text-light">
-                Poli
+                Data Lainnya
+                <i class="fa fa-angle-left right"></i>
               </p>
             </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="<?= base_url(); ?>/Poli/dpoli" class="nav-link">
+                  <i class="nav-icon fa fa-stethoscope text-light"></i>
+                  <p class="text-light">
+                    Poli
+                  </p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="<?= base_url(); ?>/Berita/dberita" class="nav-link">
+                  <i class="nav-icon fa fa-newspaper text-light"></i>
+                  <p class="text-light">
+                    Berita
+                  </p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="<?= base_url(); ?>/Fasilitas/dfasilitas" class="nav-link">
+                  <i class="nav-icon fa fa-book text-light"></i>
+                  <p class="text-light">
+                    Fasilitas
+                  </p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="<?= base_url(); ?>/Sosmed/dsosmed" class="nav-link">
+                  <i class="nav-icon fa fa-book text-light"></i>
+                  <p class="text-light">
+                    Sosmed
+                  </p>
+                </a>
+              </li>
+            </ul>
           </li>
-          <li class="nav-item">
-            <a href="<?= base_url(); ?>/Berita/dberita" class="nav-link">
-              <i class="nav-icon fa fa-newspaper text-light"></i>
-              <p class="text-light">
-                Berita
-              </p>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a href="<?= base_url(); ?>/Fasilitas/dfasilitas" class="nav-link">
-              <i class="nav-icon fa fa-book text-light"></i>
-              <p class="text-light">
-                Fasilitas
-              </p>
-            </a>
-          </li>
+
           <li class="nav-item">
             <a href="<?= base_url(); ?>/Jadwal/djadwal" class="nav-link">
               <i class="nav-icon far fa-calendar-alt text-light"></i>
@@ -92,16 +120,9 @@
               </p>
             </a>
           </li>
+
           <li class="nav-item">
-            <a href="<?= base_url(); ?>/Sosmed/dsosmed" class="nav-link">
-              <i class="nav-icon fa fa-book text-light"></i>
-              <p class="text-light">
-                Sosmed
-              </p>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a href="pages/calendar.html" class="nav-link">
+            <a href="<?= base_url(); ?>/Laporan/" class="nav-link">
               <i class="nav-icon far fa-file text-light"></i>
               <p class="text-light">
                 Laporan
@@ -114,9 +135,18 @@
               <p class="text-light">User</p>
             </a>
           </li>
-          <li class="nav-header text-light">LABELS</li>
+
           <li class="nav-item">
-            <a href="#" class="nav-link">
+            <a href="<?= base_url() ?>/admin/profile" class="nav-link">
+              <i class="nav-icon far fa-user text-light"></i>
+              <p class="text-light">
+                Profile
+              </p>
+            </a>
+          </li>
+          <!-- <li class="nav-header text-light">LABELS</li> -->
+          <li class="nav-item">
+            <a href="<?= base_url(); ?>/login/logout" onclick="return confirm('Yakin Ingin Keluar?')" class="nav-link text-white">
               <i class="nav-icon fa fa-sign-out-alt text-light"></i>
               <p class="text-light">Logout</p>
             </a>
@@ -146,6 +176,14 @@
               </p>
             </a>
           </li>
+          <li class="nav-item">
+            <a href="<?= base_url() ?>/admin/profile" class="nav-link">
+              <i class="nav-icon far fa-user text-light"></i>
+              <p class="text-light">
+                Profile
+              </p>
+            </a>
+          </li>
         <?php } elseif (session()->get('level') == 'Pimpinan') { ?>
           <li class="nav-item">
             <a href="<?= base_url(); ?>/Admin/index" class="nav-link">
@@ -161,6 +199,14 @@
               <i class="nav-icon far fa-file text-light"></i>
               <p class="text-light">
                 Laporan
+              </p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="<?= base_url() ?>/admin/profile" class="nav-link">
+              <i class="nav-icon far fa-user text-light"></i>
+              <p class="text-light">
+                Profile
               </p>
             </a>
           </li>
@@ -190,8 +236,16 @@
             </a>
           </li>
           <li class="nav-item">
-            <a href="<?= base_url(); ?>/Home" class="nav-link">
-              <i class="nav-icon fa fa-user text-light"></i>
+            <a href="<?= base_url(); ?>/Konsultasi" class="nav-link">
+              <i class="nav-icon far fa-comment text-light"></i>
+              <p class="text-light">
+                Konsultasi
+              </p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="<?= base_url() ?>/admin/profile" class="nav-link">
+              <i class="nav-icon far fa-user text-light"></i>
               <p class="text-light">
                 Profile
               </p>

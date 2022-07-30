@@ -16,17 +16,21 @@
     <div class="row mt-4">
         <div class="col-md-4 offset-4">
             <div class="card" style="background-color: #DAEAF1;">
+                <div class="card-header">
+                    <img src="<?= base_url(); ?>/img/kop.png" width="100%" alt="">
+                </div>
                 <div class="card-body">
-                    <img src="<?= base_url() ?>/template/dist/img/logo.png" width="100%" alt="logo">
-                    <h3 class="text-center mt-2">Klinik Muhammadiya</h3>
+                    <!-- <img src="<?= base_url() ?>/template/dist/img/logo.png" width="100%" alt="logo"> -->
+                    <!-- <h3 class="text-center mt-2">Klinik Muhammadiya</h3>
                     <p class="text-center">Jln. Bunghata no 33</p>
-                    <hr>
+                    <hr> -->
                     <h5 class="text-center">No Antrian</h5>
                     <h1 class="text-center"><?= $data->no_antrian; ?></h1>
                     <hr>
                     <h5 class="text-center">Tanggal Kunjungan</h5>
                     <p class="text-center"><?= $data->tgl_kunjungan; ?></p>
                     <p class="text-center"><?= $data->nm_poli; ?></p>
+                    <p class="text-center">Semoga Lekas Sembuh</p>
                 </div>
             </div>
         </div>

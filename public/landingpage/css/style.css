@@ -424,6 +424,20 @@ section:nth-child(even) {
   gap: 2rem;
 }
 
+.blogs .box-container .row .content h3 {
+  color: var(--black);
+  text-shadow: var(--text-shadow);
+  font-size: 4rem;
+  line-height: 1.8;
+}
+
+.blogs .box-container .row .content p {
+  color: var(--light-color);
+  padding: 1rem 0;
+  font-size: 1.5rem;
+  line-height: 1.8;
+}
+
 .blogs .box-container .box {
   border: var(--border);
   box-shadow: var(--box-shadow);

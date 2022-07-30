@@ -8,6 +8,12 @@ class M_daftar extends Model
 {
     protected $table = "pendaftaran";
 
+    public function laporan()
+    {
+        return $this->db->table($this->table)
+            ->join('poli', 'poli.id_poli=pendaftaran.id_poli')
+            ->get()->getResult();
+    }
     public function ambilData()
     {
         return $this->db->table($this->table)
@@ -34,5 +40,28 @@ class M_daftar extends Model
             ->join('user', 'user.id_user=pendaftaran.id_user')
             ->join('poli', 'poli.id_poli=pendaftaran.id_poli')
             ->where(['id_pendaftaran' => $id]);
+    }
+    public function cariData($tgl)
+    {
+        return $this->db->table($this->table)
+            ->join('user', 'user.id_user=pendaftaran.id_user')
+            ->join('poli', 'poli.id_poli=pendaftaran.id_poli')
+            ->where(['tgl_pendaftaran >=' => $tgl['awal']])
+            ->where(['tgl_pendaftaran <=' => $tgl['akhir']])
+            ->get()->getResult();
+    }
+    public function dlaporan()
+    {
+        return $this->db->table($this->table)
+            ->join('user', 'user.id_user=pendaftaran.id_user')
+            ->join('poli', 'poli.id_poli=pendaftaran.id_poli')
+            ->get()->getResult();
+    }
+    public function filterpoli($id)
+    {
+        return $this->db->table($this->table)
+            ->join('user', 'user.id_user=pendaftaran.id_user')
+            ->join('poli', 'poli.id_poli=pendaftaran.id_poli')
+            ->where(['pendaftaran.id_poli' => $id])->get()->getResult();
     }
 }

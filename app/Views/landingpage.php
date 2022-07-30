@@ -22,6 +22,8 @@
   $db = \Config\Database::connect();
 
   $query = $db->query("SELECT * FROM poli, dokter WHERE poli.id_poli = dokter.id_poli ORDER by id_dokter DESC LIMIT 3");
+  $fasilitas = $db->query("SELECT * FROM fasilitas")->getResult();
+  $review = $db->query("SELECT * FROM user,review WHERE user.id_user = review.id_user")->getResult();
   $berita = $db->query("SELECT * FROM berita");
 
   $data = $query->getResult();
@@ -47,7 +49,11 @@
         </div>
       </div> -->
       <!-- <a href="#doctors">Jadwal Dokter</a> -->
-      <a href="<?= base_url(); ?>/Chat">Konsultasi</a>
+      <?php if (session()->get('log_in') == true) { ?>
+        <a href="<?= base_url(); ?>/Chat">Konsultasi</a>
+      <?php } else { ?>
+        <a href="<?= base_url(); ?>/login" onclick="return confirm('Anda harus login terlebih dahulu')">Konsultasi</a>
+      <?php } ?>
       <!-- <a href="<?= base_url(); ?>/Daftar">No Antrian</a> -->
       <!-- <a href="#doctors">Konsultasi</a> -->
       <a href="<?= base_url() ?>/daftar/dpoli">Daftar</a>
@@ -86,7 +92,12 @@
     <div class="content">
       <h3>stay safe, stay healthy</h3>
       <p>Kalo bukan kita siapa lagi, kalo bukan sekarang kapan lagi</p>
-      <a href="#" class="btn"> Konsultasi Sekarang <span class="fas fa-chevron-right"></span> </a>
+      <?php if (session()->get('log_in') == true) { ?>
+        <a href="<?= base_url(); ?>/Chat" class="btn"> Konsultasi Sekarang <span class="fas fa-chevron-right"></span> </a>
+      <?php } else { ?>
+        <a href="<?= base_url(); ?>/Chat" onclick="return confirm('Anda harus login terlebih dahulu')" class="btn"> Konsultasi Sekarang <span class="fas fa-chevron-right"></span> </a>
+      <?php } ?>
+      <a href="<?= base_url() ?>/daftar/dpoli" class="btn"> Daftar <span class="fas fa-chevron-right"></span> </a>
     </div>
   </section>
 
@@ -94,37 +105,23 @@
 
   <!-- icons section starts  -->
 
+  <h1 class="heading"><span>Fasili</span>tas</h1>
   <section class="icons-container" id="poli">
-    <div class="icons">
-      <i class="fas fa-user-md"></i>
-      <h3>140+</h3>
-      <p>doctors at work</p>
-    </div>
-
-    <div class="icons">
-      <i class="fas fa-users"></i>
-      <h3>1040+</h3>
-      <p>satisfied patients</p>
-    </div>
-
-    <div class="icons">
-      <i class="fas fa-procedures"></i>
-      <h3>500+</h3>
-      <p>bed facility</p>
-    </div>
-
-    <div class="icons">
-      <i class="fas fa-hospital"></i>
-      <h3>80+</h3>
-      <p>available hospitals</p>
-    </div>
+    <?php foreach ($fasilitas as $f) { ?>
+      <div class="icons">
+        <!-- <i class="fas fa-user-md"></i> -->
+        <img src="<?= base_url(); ?>/img/<?= $f->gbr_fasilitas; ?>" width="100%" alt="Gambar">
+        <h3><?= $f->jml_fasilitas; ?></h3>
+        <p><?= $f->nm_fasilitas; ?></p>
+      </div>
+    <?php } ?>
   </section>
 
   <!-- icons section ends -->
 
   <!-- services section starts  -->
 
-  <section class="services" id="services">
+  <!-- <section class="services" id="services">
     <h1 class="heading">our <span>services</span></h1>
 
     <div class="box-container">
@@ -170,7 +167,7 @@
         <a href="#" class="btn"> Selengkapnya <span class="fas fa-chevron-right"></span> </a>
       </div>
     </div>
-  </section>
+  </section> -->
 
   <!-- services section ends -->
 
@@ -188,7 +185,7 @@
         <h3>we take care of your healthy life</h3>
         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iure ducimus, quod ex cupiditate ullam in assumenda maiores et culpa odit tempora ipsam qui, quisquam quis facere iste fuga, minus nesciunt.</p>
         <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Natus vero ipsam laborum porro voluptates voluptatibus a nihil temporibus deserunt vel?</p>
-        <a href="#" class="btn"> learn more <span class="fas fa-chevron-right"></span> </a>
+        <!-- <a href="#" class="btn"> learn more <span class="fas fa-chevron-right"></span> </a> -->
       </div>
     </div>
   </section>
@@ -217,14 +214,14 @@
       <?php } ?>
     </div>
 
-    <center><a href="#" class="btn"> Lihat Selengkapnya <span class="fas fa-chevron-right"></span> </a></center>
+    <center><a href="<?= base_url(); ?>/Admin/dokter" class="btn"> Lihat Selengkapnya <span class="fas fa-chevron-right"></span> </a></center>
   </section>
 
   <!-- doctors section ends -->
 
   <!-- booking section starts   -->
 
-  <section class="book" id="book">
+  <!-- <section class="book" id="book">
     <h1 class="heading"><span>book</span> now</h1>
 
     <div class="row">
@@ -241,7 +238,7 @@
         <input type="submit" value="book now" class="btn" />
       </form>
     </div>
-  </section>
+  </section> -->
 
   <!-- booking section ends -->
 
@@ -251,56 +248,44 @@
     <h1 class="heading">client's <span>review</span></h1>
 
     <div class="box-container">
-      <div class="box">
-        <img src="<?= base_url(); ?>/landingpage/image/pic-1.png" alt="" />
-        <h3>john deo</h3>
-        <div class="stars">
-          <i class="fas fa-star"></i>
-          <i class="fas fa-star"></i>
-          <i class="fas fa-star"></i>
-          <i class="fas fa-star"></i>
-          <i class="fas fa-star-half-alt"></i>
-        </div>
-        <p class="text">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam sapiente nihil aperiam? Repellat sequi nisi aliquid perspiciatis libero nobis rem numquam nesciunt alias sapiente minus voluptatem, reiciendis consequuntur
-          optio dolorem!
-        </p>
-      </div>
 
-      <div class="box">
-        <img src="<?= base_url(); ?>/landingpage/image/pic-2.png" alt="" />
-        <h3>john deo</h3>
-        <div class="stars">
-          <i class="fas fa-star"></i>
-          <i class="fas fa-star"></i>
-          <i class="fas fa-star"></i>
-          <i class="fas fa-star"></i>
-          <i class="fas fa-star-half-alt"></i>
-        </div>
-        <p class="text">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam sapiente nihil aperiam? Repellat sequi nisi aliquid perspiciatis libero nobis rem numquam nesciunt alias sapiente minus voluptatem, reiciendis consequuntur
-          optio dolorem!
-        </p>
-      </div>
+      <?php foreach ($review as $rev) { ?>
+        <div class="box">
+          <img src="<?= base_url(); ?>/img/<?= $rev->foto ?>" alt="gambar" />
+          <h3><?= $rev->nm_user ?></h3>
 
-      <div class="box">
-        <img src="<?= base_url(); ?>/landingpage/image/pic-3.png" alt="" />
-        <h3>john deo</h3>
-        <div class="stars">
-          <i class="fas fa-star"></i>
-          <i class="fas fa-star"></i>
-          <i class="fas fa-star"></i>
-          <i class="fas fa-star"></i>
-          <i class="fas fa-star-half-alt"></i>
+          <div class="stars">
+            <?php if ($rev->rating == '1') { ?>
+              <i class="fa fa-star" style="color:white"></i>
+            <?php } elseif ($rev->rating == '2') { ?>
+              <i class="fa fa-star" style="color:white"></i>
+              <i class="fa fa-star" style="color:white"></i>
+            <?php } elseif ($rev->rating == '3') { ?>
+              <i class="fa fa-star" style="color:white"></i>
+              <i class="fa fa-star" style="color:white"></i>
+              <i class="fa fa-star" style="color:white"></i>
+            <?php } elseif ($rev->rating == '4') { ?>
+              <i class="fa fa-star" style="color:white"></i>
+              <i class="fa fa-star" style="color:white"></i>
+              <i class="fa fa-star" style="color:white"></i>
+              <i class="fa fa-star" style="color:white"></i>
+            <?php } else { ?>
+              <i class="fa fa-star" style="color:white"></i>
+              <i class="fa fa-star" style="color:white"></i>
+              <i class="fa fa-star" style="color:white"></i>
+              <i class="fa fa-star" style="color:white"></i>
+              <i class="fa fa-star" style="color:white"></i>
+            <?php } ?>
+          </div>
+          <p class="text">
+            <?= $rev->isi_review ?>
+          </p>
         </div>
-        <p class="text">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam sapiente nihil aperiam? Repellat sequi nisi aliquid perspiciatis libero nobis rem numquam nesciunt alias sapiente minus voluptatem, reiciendis consequuntur
-          optio dolorem!
-        </p>
-      </div>
+      <?php } ?>
+
     </div>
 
-    <center><a href="#" class="btn"> Lihat Selengkapnya <span class="fas fa-chevron-right"></span> </a></center>
+    <center><a href="<?= base_url(); ?>/Admin/review" class="btn"> Lihat Selengkapnya <span class="fas fa-chevron-right"></span> </a></center>
   </section>
 
   <!-- review section ends -->
@@ -325,8 +310,8 @@
               <a href="#"> <i class="fas fa-user"></i> by admin </a>
             </div>
             <h3><?= $brt->jdl_berita ?></h3>
-            <p><?= $brt->isi_berita ?></p>
-            <a href="#" class="btn"> Selengkapnya <span class="fas fa-chevron-right"></span> </a>
+            <p><?= (str_word_count($brt->isi_berita)) > 60 ? substr($brt->isi_berita, 0, 100) . "[...]" : $brt->isi_berita ?></p>
+            <a href="<?= base_url() ?>/Admin/detail/<?= $brt->id_berita; ?>" class="btn"> Selengkapnya <span class="fas fa-chevron-right"></span> </a>
           </div>
         </div>
 
@@ -334,7 +319,7 @@
 
     </div>
 
-    <center><a href="#" class="btn"> Lihat Selengkapnya <span class="fas fa-chevron-right"></span> </a></center>
+    <center><a href="<?= base_url(); ?>/Admin/blog" class="btn"> Lihat Selengkapnya <span class="fas fa-chevron-right"></span> </a></center>
   </section>
 
   <!-- blogs section ends -->
