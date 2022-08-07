@@ -69,7 +69,7 @@
 
                     <div class="card">
                         <div class="card-header text-center">
-                            <a href="<?= base_url(); ?>/Laporan/cetakpoli/<?= $cpoli ? $cpoli[0]->id_poli : "#" ?>" class="btn btn-secondary btn-sm" target="_blank"><i class="fa fa-print"></i> Cetak</a>
+                            <a href="<?= base_url(); ?>/Laporan/cetakpoli/<?= $cpoli ? $cpoli[0]->id_poli : "#" ?>" class="btn btn-secondary btn-sm <?= $cpoli ? '' : 'disabled' ?>" target="_blank"><i class="fa fa-print"></i> Cetak</a>
                             <a href="<?= base_url(); ?>/Laporan" class="btn btn-secondary btn-sm"><i class="fa fa-history"></i> Reset</a>
                         </div>
                         <!-- /.card-header -->

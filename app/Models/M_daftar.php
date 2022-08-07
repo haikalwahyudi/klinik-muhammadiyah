@@ -64,4 +64,16 @@ class M_daftar extends Model
             ->join('poli', 'poli.id_poli=pendaftaran.id_poli')
             ->where(['pendaftaran.id_poli' => $id])->get()->getResult();
     }
+    public function pasienBulanini()
+    {
+        return $this->db->table($this->table)
+            ->where('MONTH(tgl_pendaftaran)', date('m'))
+            ->get()->getResult();
+    }
+    public function pasienHarian()
+    {
+        return $this->db->table($this->table)
+            ->where(['tgl_pendaftaran' => date('Y-m-d', time() + (60 * 60 * 14))])
+            ->get()->getResult();
+    }
 }

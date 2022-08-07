@@ -63,6 +63,33 @@
                         ?>
                     </tbody>
                 </table>
+                <div class="row justify-content-end mt-4">
+                    <div class="col-4 text-left">
+                        <table>
+                            <tr>
+                                <td>Mataram, 21 januari 2022</td>
+                            </tr>
+                            <tr>
+                                <td>yang bertandatangan</td>
+                            </tr>
+                            <tr>
+                                <td>&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td>&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td>&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td>( Nama Pimpinan )</td>
+                            </tr>
+                            <tr>
+                                <td>NIP.</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

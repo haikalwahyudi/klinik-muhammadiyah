@@ -123,6 +123,14 @@ class Dokter extends BaseController
         $gambar = $this->M_dokter->ambilData($id)->getRow();
         unlink('img/' . $gambar->foto);
         $this->M_dokter->hapus($id);
+
+        // $gambar = $this->M_user->ambilData($id)->getRow();
+        // dd($gambar);
+        // if ($gambar->foto != 'default.png') {
+        //     unlink('img/' . $gambar->foto);
+        // }
+        $this->M_user->hapusUser($id);
+
         session()->setFlashdata('hapus', 'Data berhasil dihapus');
         return redirect()->to('/Dokter/ddokter');
     }

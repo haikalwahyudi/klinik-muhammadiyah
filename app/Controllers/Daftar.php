@@ -5,10 +5,12 @@ namespace App\Controllers;
 use App\Models\M_user;
 use App\Models\M_daftar;
 use App\Models\M_poli;
+use App\Models\M_pasien;
 
 class Daftar extends BaseController
 {
     protected $M_daftar;
+    protected $M_pasien;
     protected $M_poli;
     protected $M_user;
 
@@ -17,6 +19,7 @@ class Daftar extends BaseController
         $this->M_daftar = new M_daftar;
         $this->M_poli = new M_poli;
         $this->M_user = new M_user;
+        $this->M_pasien = new M_pasien;
     }
     public function index()
     {
@@ -70,6 +73,15 @@ class Daftar extends BaseController
             'kategori'      => $this->request->getVar('kategori'),
             'pembayaran'      => $this->request->getVar('pembayaran'),
         ]);
+
+        $this->M_pasien->simpan([
+            'nm_pasien'     => $this->request->getVar('nama'),
+            'nohp'      => $this->request->getVar('nohp'),
+            'jk'      => $this->request->getVar('jk'),
+            'keluhan'      => $this->request->getVar('keluhan'),
+            'foto'      => 'default.png',
+        ]);
+
         session()->setFlashdata('simpan', 'Berhasil');
         return redirect()->to('/Daftar/dpoli');
     }

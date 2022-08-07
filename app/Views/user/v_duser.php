@@ -55,7 +55,7 @@
                                         <th>Nama User</th>
                                         <th>Email</th>
                                         <th>No Hp</th>
-                                        <th>Username</th>
+                                        <!-- <th>Username</th> -->
                                         <th>Password</th>
                                         <th>Level</th>
                                         <th>Poto</th>
@@ -71,13 +71,13 @@
                                             <td><?= $d->nm_user; ?></td>
                                             <td><?= $d->email; ?></td>
                                             <td><?= $d->nohp; ?></td>
-                                            <td><?= $d->username; ?></td>
+                                            <!-- <td><?= $d->username; ?></td> -->
                                             <td><?= $d->password; ?></td>
                                             <td><?= $d->level; ?></td>
                                             <td><img src="<?= base_url(); ?>/img/<?= $d->foto; ?>" width="50px" alt="Foto"></td>
                                             <td>
                                                 <a href="<?= base_url(); ?>/User/uuser/<?= $d->id_user; ?>" class="btn btn-warning btn-sm"><i class="fa fa-edit"></i></a>
-                                                <a href="<?= base_url(); ?>/User/huser/<?= $d->id_user; ?>" class="btn btn-danger btn-sm" onclick="return confirm('Yakin ingin menghapus data ini?')"><i class="fa fa-trash"></i></a href="<?= base_url(); ?>/Poli/">
+                                                <!-- <a href="<?= base_url(); ?>/User/huser/<?= $d->id_user; ?>" class="btn btn-danger btn-sm" onclick="return confirm('Yakin ingin menghapus data ini?')"><i class="fa fa-trash"></i></a href="<?= base_url(); ?>/Poli/"> -->
                                             </td>
                                         </tr>
                                     <?php } ?>

@@ -29,7 +29,7 @@
           <!-- small box -->
           <div class="small-box" style="background-color:#16a085">
             <div class="inner">
-              <h3 style="color:#fff;">20</h3>
+              <h3 style="color:#fff;"><?= $phi; ?></h3>
 
               <p style="color:#fff;">Pasien Hari Ini</p>
             </div>
@@ -44,8 +44,7 @@
           <!-- small box -->
           <div class="small-box" style="background-color:#16a085 ;">
             <div class="inner">
-              <h3 style="color:#fff;">75<sup style="font-size: 20px"></sup></h3>
-
+              <h3 style="color:#fff;"><?= $blnini; ?><sup style="font-size: 20px"></sup></h3>
               <p style="color:#fff;">Jumlah Pasien Bulan Ini</p>
             </div>
             <div class="icon">
@@ -65,7 +64,7 @@
             <div class="icon">
               <i class="fa fa-users"></i>
             </div>
-            <a href="<?= base_url(); ?>/pasien/dpasien" class="small-box-footer">Selengkapnya <i class="fas fa-arrow-circle-right"></i></a>
+            <a href="<?= base_url(); ?>/laporan" class="small-box-footer">Selengkapnya <i class="fas fa-arrow-circle-right"></i></a>
           </div>
         </div>
         <!-- ./col -->

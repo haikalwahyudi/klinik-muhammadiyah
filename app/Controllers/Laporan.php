@@ -4,16 +4,22 @@ namespace App\Controllers;
 
 use App\Models\M_daftar;
 use App\Models\M_poli;
+use App\Models\M_chat;
+use App\Models\M_dokter;
 
 class Laporan extends BaseController
 {
     protected $M_poli;
     protected $M_daftar;
+    protected $M_chat;
+    protected $M_dokter;
 
     public function __construct()
     {
         $this->M_daftar = new M_daftar;
         $this->M_poli = new M_poli;
+        $this->M_chat = new M_chat;
+        $this->M_dokter = new M_dokter;
     }
     public function index()
     {
@@ -76,5 +82,38 @@ class Laporan extends BaseController
             'poli'      => $this->M_poli->ambilData()
         ];
         return view('laporan/v_plaporan', $data);
+    }
+
+    //Chat =============================
+
+    public function lchat()
+    {
+        $data = [
+            'data'  => $this->M_chat->laporanchat(),
+            'ddokter'   => $this->M_dokter->ambilData()
+        ];
+        return view('/laporan/v_laporanChat', $data);
+    }
+    public function cariDokter($id)
+    {
+        $data = [
+            'data'  => $this->M_chat->cari($id),
+            'ddokter'   => $this->M_dokter->ambilData()
+        ];
+        return view('/laporan/v_flaporanChat', $data);
+    }
+    public function cetak3()
+    {
+        $data = [
+            'cetak'  => $this->M_chat->laporanchat(),
+        ];
+        return view('/laporan/v_ClaporanChat', $data);
+    }
+    public function cetak4($id)
+    {
+        $data = [
+            'cetak'  => $this->M_chat->cari($id),
+        ];
+        return view('/laporan/v_CFlaporanChat.php', $data);
     }
 }

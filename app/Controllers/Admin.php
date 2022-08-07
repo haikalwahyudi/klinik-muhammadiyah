@@ -7,6 +7,7 @@ use App\Models\M_pasien;
 use App\Models\M_user;
 use App\Models\M_review;
 use App\Models\M_berita;
+use App\Models\M_daftar;
 
 class Admin extends BaseController
 {
@@ -14,6 +15,7 @@ class Admin extends BaseController
     protected $M_dokter;
     protected $M_review;
     protected $M_user;
+    protected $M_daftar;
     protected $M_berita;
     public function __construct()
     {
@@ -22,25 +24,40 @@ class Admin extends BaseController
         $this->M_berita = new M_berita();
         $this->M_user = new M_user();
         $this->M_review = new M_review();
+        $this->M_daftar = new M_daftar();
     }
     public function index()
     {
         $ddokter = $this->M_dokter->ambilData();
-        $dpasien = $this->M_pasien->ambilData();
+        $ddaftar = $this->M_daftar->ambilData();
+        $psnbulanini = $this->M_daftar->pasienBulanini();
+        $pnsharian = $this->M_daftar->pasienHarian();
+
+        // dd($pnsharian);
 
         $ddktr = 0;
         $dpsn = 0;
+        $pbi = 0;
+        $phi = 0;
 
         foreach ($ddokter as $d) {
             $ddktr++;
         }
-        foreach ($dpasien as $psn) {
+        foreach ($ddaftar as $psn) {
             $dpsn++;
+        }
+        foreach ($psnbulanini as $blnini) {
+            $pbi++;
+        }
+        foreach ($pnsharian as $hrini) {
+            $phi++;
         }
 
         $data = [
             'ddokter' => $ddktr,
             'dpsn' => $dpsn,
+            'blnini' => $pbi,
+            'phi' => $phi,
         ];
         return view('admin/v_branda', $data);
     }
@@ -69,7 +86,9 @@ class Admin extends BaseController
         } else {
             $namagambar = $gambar->getRandomName();
             $gambar->move('img/', $namagambar);
+            if($this->request->getVar('old_foto') !== 'default.png'){
             unlink('img/' . $this->request->getVar('old_foto'));
+            }
         }
 
         $this->M_user->ubah([

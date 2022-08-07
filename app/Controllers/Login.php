@@ -25,7 +25,7 @@ class Login extends BaseController
         $cek = $this->M_login->cariData($email);
         // dd($cek);
         if ($cek != null) {
-            if ($cek['level'] == 'Admin' || $cek['level'] == 'Dokter' || $cek['level'] == 'Pimpinan') {
+            if ($cek['level'] == 'Admin' || $cek['level'] == 'Pimpinan') {
                 $data_ses = [
                     'nama'      => $cek['nm_user'],
                     'level'     => $cek['level'],
@@ -37,6 +37,22 @@ class Login extends BaseController
                 if ($cek['password'] == $password) {
                     session()->set($data_ses);
                     return redirect()->to('/admin');
+                } else {
+                    session()->setFlashdata('salah', 'Password anda salah');
+                    return redirect()->to('/login');
+                }
+            } elseif ($cek['level'] == 'Dokter') {
+                $data_ses = [
+                    'nama'      => $cek['nm_user'],
+                    'level'     => $cek['level'],
+                    'foto'      => $cek['foto'],
+                    'id'        => $cek['id_user'],
+                    'id_dokter' => $cek['id_dokter'],
+                    'log_in'    => true
+                ];
+                if ($cek['password'] == $password) {
+                    session()->set($data_ses);
+                    return redirect()->to('/Konsultasi');
                 } else {
                     session()->setFlashdata('salah', 'Password anda salah');
                     return redirect()->to('/login');

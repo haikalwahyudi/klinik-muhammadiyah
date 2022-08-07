@@ -47,7 +47,7 @@
                                     <tr>
                                         <th>No.</th>
                                         <th>Judul Berita</th>
-                                        <th>Isi</th>
+                                        <!-- <th>Isi</th> -->
                                         <th>Tanggal</th>
                                         <th>Gambar</th>
                                         <th>Aksi</th>
@@ -61,7 +61,7 @@
                                         <tr>
                                             <td><?= $no++; ?></td>
                                             <td><?= $d->jdl_berita; ?></td>
-                                            <td><?= $d->isi_berita; ?></td>
+                                            <!-- <td><?= $d->isi_berita; ?></td> -->
                                             <td><?= $d->tgl_berita; ?></td>
                                             <td><img src="<?= base_url(); ?>/img/<?= $d->gbr_berita; ?>" width="50" alt="Gambar"></td>
                                             <td>

@@ -25,7 +25,10 @@
         <div class="container-fluid">
             <!-- Small boxes (Stat box) -->
             <div class="row">
-                <?php foreach ($data as $d) { ?>
+                <?php foreach ($data as $d) {
+                    //  $dt = $db->query("SELECT * FROM user WHERE id_user = '$d[id_user]'")->getRowArray();
+                ?>
+
                     <div class="col-12 col-sm-6 col-md-4 mb-4">
                         <div class="card bg-light h-100">
                             <div class="card-header text-muted border-bottom-0">

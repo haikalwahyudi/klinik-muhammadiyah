@@ -25,6 +25,12 @@ class M_user extends Model
     $hapus = $this->db->table($this->table);
     return $hapus->delete(['id_user' => $id_user]);
     }
+
+    public function hapusUser($id_dokter)
+    {
+    $hapus = $this->db->table($this->table);
+    return $hapus->delete(['id_dokter' => $id_dokter]);
+    }
     public function ubah($data,$id_user)
     {
     $ubah = $this->db->table($this->table);

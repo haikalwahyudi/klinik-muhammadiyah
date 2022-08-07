@@ -73,9 +73,9 @@
                                                 <img src="<?= base_url() ?>/img/<?= $d->foto; ?>" width="80" alt="Gambar">
                                             </td>
                                             <td>
-                                                <a href="<?= base_url(); ?>/Dokter/detail_dokter/<?= $d->id_dokter; ?>" class="btn btn-success btn-sm">Detail</a>
-                                                <a href="<?= base_url(); ?>/Dokter/udokter/<?= $d->id_dokter; ?>" class="btn btn-warning btn-sm">Ubah</a>
-                                                <a href="<?= base_url(); ?>/Dokter/hdokter/<?= $d->id_dokter; ?>" onclick="return confirm('Yaking ingin menghapus data ini?');" class="btn btn-danger btn-sm">Hapus</a>
+                                                <a href="<?= base_url(); ?>/Dokter/detail_dokter/<?= $d->id_dokter; ?>" class="btn btn-success btn-sm "><i class="fa fa-eye"></i></a>
+                                                <a href="<?= base_url(); ?>/Dokter/udokter/<?= $d->id_dokter; ?>" class="btn btn-warning btn-sm"><i class="fa fa-edit"></i></a>
+                                                <a href="<?= base_url(); ?>/Dokter/hdokter/<?= $d->id_dokter; ?>" onclick="return confirm('Yaking ingin menghapus data ini?');" class="btn btn-danger btn-sm"><i class="fa fa-trash"></i></a>
                                             </td>
                                         </tr>
                                     <?php } ?>
