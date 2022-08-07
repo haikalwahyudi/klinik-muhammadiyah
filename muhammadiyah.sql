@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.1.1
+-- version 5.2.0
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Aug 07, 2022 at 04:26 AM
--- Server version: 10.4.19-MariaDB
--- PHP Version: 7.4.20
+-- Generation Time: Aug 07, 2022 at 02:20 PM
+-- Server version: 10.4.24-MariaDB
+-- PHP Version: 7.4.29
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -63,7 +63,6 @@ CREATE TABLE `chat` (
 
 INSERT INTO `chat` (`id_chat`, `id_user`, `tujuan`, `aksi`, `urutan`, `pesan`) VALUES
 (82, 9, 14, 2, 1659681233, 'selamat siang dok'),
-(83, 14, 9, 1, 1659681345, 'selamat siang'),
 (84, 9, 17, 2, 1659758285, 'selamat pagi');
 
 -- --------------------------------------------------------
